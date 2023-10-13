@@ -1,0 +1,19 @@
+.apod-container {
+    max-width: 800px;
+    margin: 0;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.centered {
+    text-align: center;
+}
+
+.content {
+   
+} 
+
+#apod-image {
+    max-width: 100%;
+}
