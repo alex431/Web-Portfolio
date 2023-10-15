@@ -1,18 +1,29 @@
-import '../css/nav_style.css';
-import { config } from "../../apod-config.js";
+// Get the API key from an environment variable (process.env.apod_api_key)
+const apiKey = process.env.apod_api_key;
 
-document.addEventListener('DOMContentLoaded', function () {
-    const apiKey = config.apod_apikey;
-    const apodUrl = `https://api.nasa.gov/planetary/apod?api_key=${apiKey}`;
+// Build the URL for the Astronomy Picture of the Day (APOD) API
+const apodUrl = `https://api.nasa.gov/planetary/apod?api_key=${apiKey}`;
 
-    fetch(apodUrl)
-        .then(response => response.json())
-        .then(data => {
-            document.getElementById('apod-image').src = data.url;
-            document.getElementById('apod-title').textContent = data.title;
-            document.getElementById('apod-explanation').textContent = data.explanation;
-        })
-        .catch(error => {
-            console.error('Error fetching APOD data: ', error);
-        });
-});
+// An asynchronous function to fetch and display the APOD image
+async function loadAPOD() {
+    try {
+        // Fetch data from the APOD API and await the response
+        const response = await fetch(apodUrl);
+        if (!response.ok) {
+            throw new Error('Failed to fetch APOD data');
+        }
+        const data = await response.json();
+
+        // Update the 'src' attribute of the 'apod-image' element with the APOD image URL
+        document.getElementById('apod-image').src = data.url;
+
+        // Set the text content of the 'apod-title' and 'apod-explanation' elements with APOD data
+        document.getElementById('apod-title').textContent = data.title;
+        document.getElementById('apod-explanation').textContent = data.explanation;
+    } catch (error) {
+        console.error('Error fetching or displaying APOD data: ', error);
+    }
+}
+
+// Call the function to load the APOD image
+loadAPOD();
