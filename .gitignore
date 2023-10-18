@@ -1,3 +1,4 @@
-apod.env
+.env
 node_modules/
 .babelrc
+dist/

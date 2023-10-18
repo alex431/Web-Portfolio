@@ -1,0 +1,8 @@
+{
+    // Babel presets configuration
+    "presets": [
+        // Use @babel/preset-env to enable modern JavaScript features    
+        "@babel/preset-env"
+    ]
+
+}
