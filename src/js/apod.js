@@ -1,3 +1,4 @@
+// require('dotenv').config();
 
 // Get the API key from an environment variable (process.env.apod_api_key)
 const apiKey = process.env.apod_api_key;

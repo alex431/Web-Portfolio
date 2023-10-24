@@ -1,0 +1,16 @@
+#countdown {
+    text-align: center;
+    font-size: 24px;
+    margin: 0 5px; /* Center the elements horizontally */
+  }
+
+#countdown-prompt {
+  margin: 0;
+}
+
+#countdown-display {
+  margin: 0 0 5px 0;
+}
+
+
+

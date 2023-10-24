@@ -22,6 +22,9 @@
     "webpack-cli": "^5.1.4"
   },
   "dependencies": {
+    "@fullcalendar/core": "^6.1.9",
+    "@fullcalendar/daygrid": "^6.1.9",
+    "@fullcalendar/interaction": "^6.1.9",
     "buffer": "^6.0.3",
     "crypto-browserify": "^3.12.0",
     "os-browserify": "^0.3.0",

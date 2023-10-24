@@ -1,4 +1,5 @@
 const path = require('path');
+const webpack = require('webpack');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const DotenvWebpackPlugin = require('dotenv-webpack');
 
@@ -7,6 +8,8 @@ module.exports = {
   entry: {
     apod: ['./src/js/apod.js','./src/css/pod_style.css'],
     active: ['./src/js/active.js','./src/css/nav_style.css'],
+    special_day: ['./src/js/special_day.js','./src/css/countdown.css'],
+    calendar: ['./src/js/calendar.js','./src/css/cal_style.css'],
          }, // Adjust the entry point to your main JavaScript file
   output: {
     path: path.resolve(__dirname, 'dist'), // Output directory for bundled files
@@ -14,6 +17,8 @@ module.exports = {
   },
   plugins: [
     
+    new webpack.HotModuleReplacementPlugin(),
+
     new DotenvWebpackPlugin({
       path: './.env',
     }),
@@ -21,7 +26,7 @@ module.exports = {
     new HtmlWebpackPlugin({
       template: './src/html/home.html', // Path to your HTML template
       filename: './html/home.html', // Name of the generated HTML file
-      chunks:['apod','active'],
+      chunks:['apod','active','special_day','calendar'],
     }),
 
     new HtmlWebpackPlugin({
@@ -36,6 +41,7 @@ module.exports = {
       chunks:['active']
     }),
   ],
+
   module: {
     rules: [
       {

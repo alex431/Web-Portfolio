@@ -32,6 +32,9 @@ npm install [package]
 * buffer
 * dotenv 
 * donenv-webpack
+* @fullcalendar/core
+* @fullcalendar/interaction
+* @fullcalendar/daygrid
 
 <u>Configuration Files</u><br>
 * babel.config.json
