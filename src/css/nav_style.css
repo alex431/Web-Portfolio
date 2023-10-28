@@ -1,10 +1,9 @@
 /* CSS for body and header */
 body
 {
-    margin: 0px; /* Remove default margin */
-    /* display: flex;
-    flex-direction: column;
-    min-height: 100vh; Ensure the body takes up at least the full viewport height */
+    margin: 0; /* Remove default margin */
+    padding: 0 ;
+
 } 
 
 #top-header
@@ -14,7 +13,7 @@ body
 }
 
 /* CSS for navigation links */
-#nav1 > .nav-links 
+#top-nav > .nav-links 
 {
   display: flex;
   flex-direction: row;
@@ -26,33 +25,24 @@ body
   margin: 0px;
 }
 
-#nav1 > .nav-links > li
+#top-nav > .nav-links > li
 {
   padding: 7px 4px;
 }
 
-#nav1 > .nav-links > li > a
+#top-nav > .nav-links > li > a
 {
   text-decoration: none;
   font-size: 18px;
 }
 
-#nav1 > .nav-links li:hover
+#top-nav > .nav-links li:hover
 {
   background-color: #a45ee5; /* Change background color on hover */
 }
 
-.footer-container
-{
-  display: flex;
-  flex-direction: column;
-  min-height: 100vh;
-  /* overflow: hidden; */
-}
-
 footer
 {
- 
   overflow: hidden;
   background: #FF7518;
   margin-top: auto; /* Push the footer to the bottom of the page */
@@ -64,65 +54,64 @@ footer > p
 }
 
 @media screen and (max-width: 768px) 
-{   
-    .hamburger 
-    {
-      display: flex;
-      flex-direction: column;
-      cursor: pointer;
-      padding: 5px 3px;
-      top: 3px;     
-    }
+{  /* Styles for the hamburger menu */ 
+  .hamburger 
+  {
+    display: flex;
+    flex-direction: column;
+    cursor: pointer;
+    padding: 5px 3px;
+    top: 3px;     
+  }
       
-    .hamburger > span
-    {
-      width: 25px;
-      height: 4px;
-      background-color: black;
-      margin: 1px 0;  
-      transition: background-color 0.3s ease-in-out; /* Smooth transition */
-    }
+  .hamburger > span
+  {
+    width: 25px;
+    height: 4px;
+    background-color: black;
+    margin: 1px 0;  
+    transition: background-color 0.3s ease-in-out; /* Smooth transition */
+  }
 
-    #nav1 > .nav-links
-    {
-      display: none; /* Hide the navigation links by default */
-    }     
+  #top-nav > .nav-links
+  {
+    display: none; /* Hide the navigation links by default */
+  }     
     
-    /* Styles for the navigation when it's active (visible) */
-    #nav1.active 
-    {
-      display: flex; 
-      flex-direction: column;
-      position: fixed;
-      width: 100%;
-      height: 100%;
-      background-color: #50C878;
-      top: 0;
-      left: 0;
-      z-index: 1;
-    }
+  /* Styles for the navigation when it's active (visible) */
+  #top-nav.active 
+  {
+    display: flex; 
+    flex-direction: column;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background-color: #50C878;
+    top: 0;
+    left: 0;
+    z-index: 1;
+  }
 
-    #nav1.active .hamburger > span
-    {
-      background-color: transparent; /* Hide the hamburger menu bars */
-      transition: background-color 0.3s ease-in-out;
-    }
+  #top-nav.active .hamburger > span
+  {
+    background-color: transparent; /* Hide the hamburger menu bars */
+    transition: background-color 0.3s ease-in-out;
+  }
     
-    #nav1.active > .nav-links 
-    {
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      height: 100%;
+  #top-nav.active > .nav-links 
+  {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
       
-    }
+  }
 
-    #nav1.active > .nav-links > li > a
-    {
-      color: #E34234; /* Change link color when active */
-    }
-
+  #top-nav.active > .nav-links > li > a
+  {
+    color: #E34234; /* Change link color when active */
+  }
 }
 
     

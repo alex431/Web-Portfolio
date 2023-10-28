@@ -1,0 +1,68 @@
+.projects-container 
+{
+    background: #232443;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 48px 0;
+}
+
+/* Styling for a container that holds projects.
+   - Sets a dark background color (#232443).
+   - Uses flexbox to center its content both horizontally and vertically.
+   - Adds padding of 48px at the top and bottom.
+*/
+
+.projects-content 
+{
+    color: #F1F1F1;
+    width: 100%;
+    max-width: 1000px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px;
+}
+
+/* Styles for the content within the projects container.
+   - Sets the text color to a light color (#F1F1F1).
+   - Specifies a maximum width of 1000px and makes it responsive.
+   - Uses flexbox to arrange content in a row, space-between layout.
+   - Adds 12px of padding to the content.
+*/
+
+.projects-item 
+{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+/* Styling for individual project items.
+   - Utilizes flexbox for column layout.
+   - Centers the items horizontally and sets text alignment to center.
+   - (Note: The "justify-content" line is commented out, meaning it's not used in this context).
+*/
+
+.btn
+{
+    display: inline-block;
+    padding: 6px 12px;
+    background-color: #007BFF; /* Change the background color to your preference */
+    color: #fff; /* Change the text color to your preference */
+    text-decoration: none;
+    border: none;
+    border-radius: 6px;
+    text-align: center;
+}
+
+/* Styling for buttons with the "btn" class.
+   - Makes the button an inline block element.
+   - Specifies padding for internal spacing.
+   - Sets background color and text color for the button. You can customize these colors.
+   - Removes the default button styling (border and text decoration).
+   - Adds rounded corners with a border-radius.
+   - Centers text within the button.
+*/

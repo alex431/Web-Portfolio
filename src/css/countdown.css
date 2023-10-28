@@ -1,15 +1,23 @@
-#countdown {
-    text-align: center;
-    font-size: 24px;
-    margin: 0 5px; /* Center the elements horizontally */
-  }
-
-#countdown-prompt {
-  margin: 0;
+/* Styles for #countdown */
+#countdown 
+{
+  text-align: center; /* Center the text horizontally */
+  font-size: 24px; /* Set the font size to 24px */
+  margin: 0; /* Remove any default margin */
+  padding: 0 4px 1px 4px; /* Set specific padding values (top, right, bottom, left) */
+  background-color: white; /* Set the background color to white */
 }
 
-#countdown-display {
-  margin: 0 0 5px 0;
+/* Styles for #countdown-prompt */
+#countdown-prompt 
+{
+  margin: 0; /* Remove any default margin */
+}
+
+/* Styles for #countdown-display */
+#countdown-display 
+{
+  margin: 0 0 5px 0; /* Set specific margin values (top, right, bottom, left) */
 }
 
 

@@ -1,19 +1,21 @@
-.apod-container {
+.apod-container 
+{
     max-width: 800px;
     margin: 0;
     padding: 10px;
     background-color: #fff;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.1);
 }
 /* Styling for a container that holds content, like an image and text.
    - Sets a maximum width of 800px.
    - Removes margin.
-   - Adds 20px of padding inside the container.
+   - Adds 10px of padding inside the container.
    - Gives the container a white background.
    - Applies a subtle box shadow for depth.
 */
 
-.centered {
+.centered 
+{
     text-align: center;
     margin-bottom: 5px;
     margin-top: 0;
@@ -22,11 +24,54 @@
    - Used for text alignment.
 */
 
-#apod-image {
+#apod-image, #apod-video 
+{
     max-width: 100%;
 }
 
-/* Styling for an element with the ID "apod-image".
-   - Sets the maximum width to 100% to make it responsive.
-   - Ensures the image resizes to fit its container.
+/* Styling for elements with the IDs "apod-image" and "apod-video".
+   - Sets the maximum width to 100% to make them responsive.
+   - Ensures images and videos resize to fit their containers.
+*/
+
+.content
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Styles for an element with the class "content."
+   - Utilizes flexbox to center content both horizontally and vertically.
+*/
+
+#apod-explanation 
+{
+    margin: 0;
+}
+
+/* Styling for an element with the ID "apod-explanation."
+   - Removes margin to control spacing around the explanation text.
+*/
+
+
+@media (max-width: 768px) 
+{
+    .apod-container 
+    {
+        max-width: 100%; /* Expand to full width */
+        padding: 10px;
+    }
+
+    #apod-image, #apod-video 
+    {
+        width: 100%; /* Override max-width to ensure full width */
+    }
+}
+
+/* Media query for screens with a maximum width of 768px.
+   - Adjusts styles for responsive design.
+   - The "apod-container" expands to full width, and padding remains 10px.
+   - "apod-image" and "apod-video" elements have their width set to 100% to ensure full width.
 */

@@ -7,7 +7,7 @@ module.exports = {
   mode: 'development',
   entry: {
     apod: ['./src/js/apod.js','./src/css/pod_style.css'],
-    active: ['./src/js/active.js','./src/css/nav_style.css'],
+    active: ['./src/js/active.js','./src/css/nav_style.css','./src/css/proj_style.css','./src/css/hero_style.css'],
     special_day: ['./src/js/special_day.js','./src/css/countdown.css'],
     calendar: ['./src/js/calendar.js','./src/css/cal_style.css'],
          }, // Adjust the entry point to your main JavaScript file
