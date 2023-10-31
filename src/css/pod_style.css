@@ -14,7 +14,7 @@
    - Applies a subtle box shadow for depth.
 */
 
-.centered 
+.title-center 
 {
     text-align: center;
     margin-bottom: 5px;
@@ -24,7 +24,8 @@
    - Used for text alignment.
 */
 
-#apod-image, #apod-video 
+#apod-image,
+#apod-video 
 {
     max-width: 100%;
 }
@@ -34,7 +35,7 @@
    - Ensures images and videos resize to fit their containers.
 */
 
-.content
+.apod-content
 {
     display: flex;
     flex-direction: column;
@@ -60,13 +61,13 @@
 {
     .apod-container 
     {
-        max-width: 100%; /* Expand to full width */
+        max-width: 100%; 
         padding: 10px;
     }
 
     #apod-image, #apod-video 
     {
-        width: 100%; /* Override max-width to ensure full width */
+        width: 100%; 
     }
 }
 

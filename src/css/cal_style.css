@@ -1,9 +1,13 @@
 /* Styles for .calendar-container */
 .calendar-container
 {
+  /* position: absolute; */
+  /* top: 100%; */
+  /* right: 0; */
+
   float: right;
   max-width: 380px;
-  border: 1px solid black; /* Add a border directly to the content */
+  border: 1px solid black; /* Add a border directly to the content */  
 }
 
 /* Styles for #calendar */
@@ -17,7 +21,8 @@
 }
 
 /* Styles for navigation buttons within #calendar */
-#calendar .fc-prev-button, #calendar .fc-next-button 
+#calendar .fc-prev-button, 
+#calendar .fc-next-button 
 {
   background: none;  /* Remove the background */
   border: none;      /* Remove the border */
@@ -26,23 +31,9 @@
   padding: 0px;
 }
 
-/* #calendar .fc-prev-button:focus
-{
-  outline: none;
-  box-shadow: none;
-} */
-
-/* #calendar .fc-next-button 
-{
-  background: none;  
-  border: none;    
-  outline: none;
-  color: #000;
-  padding: 0px;
-} */
-
 /* Styles for navigation button focus within #calendar */
-#calendar .fc-prev-button:focus,#calendar .fc-next-button:focus
+#calendar .fc-prev-button:focus,
+#calendar .fc-next-button:focus
 {
   outline: none;
   box-shadow: none;
@@ -66,9 +57,18 @@
 /* Media query for screens with a max-width of 768px */
 @media (max-width: 768px) 
 {
+  .calendar-container 
+  {
+    /* position: relative;
+    top: 0; Reset the top property
+    right: 0; Reset the right property */
+    max-width: 100%; /* Expand to full width */
+    margin: 0; /* Remove any margin */
+  }
+
     /* Adjust styles for smaller screens */
   .calendar-container.active 
-    {
-      display: none;
-    }
+  {
+    display: none;
+  }
 }
