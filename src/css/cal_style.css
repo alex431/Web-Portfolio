@@ -1,12 +1,8 @@
 /* Styles for .calendar-container */
 .calendar-container
 {
-  /* position: absolute; */
-  /* top: 100%; */
-  /* right: 0; */
-
-  float: right;
-  max-width: 380px;
+  float: right; /* Float the container to the right */
+  max-width: 380px; /* Set a maximum width for the container */
   border: 1px solid black; /* Add a border directly to the content */  
 }
 
@@ -17,58 +13,68 @@
   max-width: 360px; /* Adjust max-width to accommodate the border */
   text-align: center; /* Center the content within the border */
   margin: 0 auto; /* Center the elements horizontally */
-  background-color: white;
+  background-color: white; /* Set a white background for the calendar */
 }
 
 /* Styles for navigation buttons within #calendar */
 #calendar .fc-prev-button, 
 #calendar .fc-next-button 
 {
-  background: none;  /* Remove the background */
-  border: none;      /* Remove the border */
-  outline: none;
-  color: #000;
-  padding: 0px;
+  background: none; /* Remove the background */
+  border: none;     /* Remove the border */
+  outline: none;    /* Remove the focus outline */
+  color: #000;    /* Set the text color to black */
+  padding: 0px;     /* Remove any padding */
 }
 
 /* Styles for navigation button focus within #calendar */
 #calendar .fc-prev-button:focus,
-#calendar .fc-next-button:focus
+#calendar .fc-next-button:focus 
 {
-  outline: none;
-  box-shadow: none;
+  outline: none;    /* Remove the focus outline */
+  box-shadow: none; /* Remove any box shadow on focus */
 }
 
 /* Styles for specific button within #calendar */
 #calendar .fc-dayGridMonth-button
 {
-  outline: none;
-  box-shadow: none;   
+  outline: none; /* Remove the focus outline for this specific button */
+  box-shadow: none;  /* Remove any box shadow on focus for this specific button */ 
 }
 
 /* Styles for calendar header cells */
 #calendar .fc-col-header-cell-cushion
 {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  display: flex;  /* Use flexbox for layout */
+  justify-content: center;  /* Center content horizontally */
+  align-items: center;       /* Center content vertically */
 }
 
-/* Media query for screens with a max-width of 768px */
-@media (max-width: 768px) 
+#calendar .fc-header-toolbar
+{
+  margin-bottom: 0.5em; /* Add some margin to the bottom of the header toolbar */
+  display: flex; /* Use flexbox for layout */
+  justify-content: space-evenly; /* Space elements evenly within the header toolbar */
+}
+
+/* Media query for screens with a max-width of 1120px */
+@media (max-width: 1120px) 
 {
   .calendar-container 
   {
-    /* position: relative;
-    top: 0; Reset the top property
-    right: 0; Reset the right property */
-    max-width: 100%; /* Expand to full width */
-    margin: 0; /* Remove any margin */
+    float: none; /* Remove the float property */
+    background-color: white; /* Set a white background for the container */
+    margin: 0 auto; /* Center the container horizontally */
+  }
+
+  #calendar
+  {
+    max-width: 100%; 
   }
 
     /* Adjust styles for smaller screens */
   .calendar-container.active 
   {
-    display: none;
+    display: none; /* Hide the calendar container when it has the 'active' class */
   }
 }

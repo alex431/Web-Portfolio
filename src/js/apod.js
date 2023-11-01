@@ -43,5 +43,5 @@ async function loadAPOD()
     }
 }
 
-// Call the function to load the APOD image
+// Call the function to adjust the container size when APOD content is loaded
 loadAPOD();
