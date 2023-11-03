@@ -4,7 +4,7 @@ For the Code You web development project, I wanted to showcase a website related
 
 Note: This is an node.js project.Thus, there is assumption that node.js and npm is already installed. The utilized version of node is 20.7.0 and the utilized version of npm is 10.1.0.
 
-<h1>Steps for Building the Project</h1>
+## Steps for Building the Project
 
 1. Clone the project's repository using Git Bash
 
@@ -27,15 +27,21 @@ This command will initiate the project as a node.js project and create a package
 ```
 npm init -y
 ```
-Note: The package.json file is typically found in the project's root folder.
 
-This command will install the package in question and all of its dependencies locally within the project's node_modules directory.
+Navigate to the directory where the package.json is located.This command will install all the dependencies and devDependencies listed in the package.json file
 
 ```
+npm install
+```
+Note: The package.json file is typically found in the project's root folder. 
+
+<!-- This command will install the package in question and all of its dependencies locally within the project's node_modules directory. -->
+
+<!-- ```
 npm install [package]
-```
+``` -->
 
-<u>Required Packages</u>
+<!-- <u>Required Packages</u>
 * babel-loader
 * @babel/core
 * @babel/preset-env
@@ -53,9 +59,9 @@ npm install [package]
 * donenv-webpack
 * @fullcalendar/core
 * @fullcalendar/interaction
-* @fullcalendar/daygrid
+* @fullcalendar/daygrid -->
 
-<u>Nasa APIs key Provisioning</u>
+### Nasa APIs key Provisioning
 * Visit https://api.nasa.gov/ 
 * Enter the following information:
     * First name
@@ -64,7 +70,7 @@ npm install [package]
 
 You should receive an email with the associated email address within a few minutes after the submission.The email may appear in the spam/junk folder.
 
-<u>Configuration Files</u><br>
+### Configuration Files
 * babel.config.json
     * User-created
     * Associated with Babel
@@ -80,22 +86,32 @@ You should receive an email with the associated email address within a few minut
 
 3. You can run either command inside a terminal of visual studio code to build the project using webpack.
 
+This command runs the custom portfolio script to build the project defined in the package.json file.  
+
 ```
 npm run portfolio
 ```
 
-This command runs the custom portfolio script to build the project defined in the package.json file.  
 
 <div align="center">or</div>
+<br>
+
+This command will search for the 'webpack' binary in the project's dependencies.
 
 ```
 npx webpack
 ```
-This command will search for the 'webpack' binary in the project's dependencies.
 
-Note: Both commands will produce seperate folder, 'dist' that contains the bundled code. The Cascading Style Sheets are injecting into javascript files.
+Note: Both commands will produce seperate folder, 'dist' that contains the bundled code. The CSS files are injected into javascript files. 
 
-<u>Current Implemented Features</u>
+## Steps for Running the Project
+1. Locate the 'dist' folder
+2. Navigate to the 'html' folder within the 'dist' folder
+3. Open 'home.html' file with any web browser.
+
+Note: The main browsers used in the development of this portfolio website are brave and edge.
+
+## Current Implemented Features
 *  Calculate and display data based on an external factor
 *  Retrieve data from a third-party API and use it to display something within your app
 *  Implement modern interactive UI features (e.g. table/data sorting, autocomplete, drag-and-drop,calendar-date-picker, etc).
