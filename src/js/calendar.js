@@ -3,14 +3,14 @@ import interactionPlugin from '@fullcalendar/interaction';
 import dayGridPlugin from '@fullcalendar/daygrid';
 
 // Add an event listener to run the code after the DOM has loaded
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function () {
   // Get the DOM element where the calendar will be displayed
-  var calendarEl = document.getElementById('calendar');
+  const calendarEl = document.getElementById('calendar');
 
   // Create a new FullCalendar instance and configure it
-  var calendar = new Calendar(calendarEl, {
-    plugins: [ interactionPlugin, dayGridPlugin],
-    headerToolbar: 
+  const calendar = new Calendar(calendarEl, {
+    plugins: [interactionPlugin, dayGridPlugin],
+    headerToolbar:
     {
       left: 'prev',
       center: 'title',

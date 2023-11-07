@@ -4,7 +4,7 @@
   text-align: center; /* Center the text horizontally */
   font-size: 24px; /* Set the font size to 24px */
   margin: 0; /* Remove any default margin */
-  padding: 0 4px 1px 4px; /* Set specific padding values (top, right, bottom, left) */
+  padding: 0 4px 1px; /* Set specific padding values (top, right, bottom, left) */
   background-color: white; /* Set the background color to white */
 }
 
@@ -17,7 +17,7 @@
 /* Styles for #countdown-display */
 #countdown-display 
 {
-  margin: 0 0 5px 0; /* Set specific margin values (top, right, bottom, left) */
+  margin: 0 0 5px; /* Set specific margin values (top, right, bottom, left) */
 }
 
 

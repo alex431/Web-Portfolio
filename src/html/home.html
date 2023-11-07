@@ -1,90 +1,105 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-<meta charset="UTF-8">    
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>
-Homepage
-</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>
+        Homepage
+    </title>
+
+    <link rel="preconnect" href="https://api.nasa.gov" crossorigin="use-credentials">
+    <link rel="dns-prefetch" href="//api.nasa.gov">
+
 </head>
+
 <body>
-<header id="top-header">
-    <nav id="top-nav">
-        <!-- Create a header and navigation section -->
-        <div class="hamburger">
-            <span></span>
-            <span></span>
-            <span></span>
-            <!-- Hamburger menu icon with three spans -->
+    <header id="top-header">
+        <nav id="top-nav">
+            <!-- Create a header and navigation section -->
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+                <!-- Hamburger menu icon with three spans -->
+            </div>
+
+            <ul class="nav-links">
+                <li>
+                    <a href="home.html">Home</a>
+                </li>
+                <li>
+                    <a href="about.html">About</a>
+                </li>
+                <li>
+                    <a href="contact.html">Contact</a>
+                </li>
+                <!-- Unordered list of navigation links -->
+            </ul>
+        </nav>
+    </header>
+
+    <main class="main-container">
+        <div class="calendar-container">
+            <div id="calendar"></div>
+
+            <div id="countdown">
+                <p id="countdown-prompt">Countdown to My Birthday:</p>
+                <p id="countdown-display">Calculating...</p>
+            </div>
         </div>
 
-        <ul class="nav-links">
-            <li>
-                <a href="home.html">Home</a>
-            </li>
-            <li>    
-                <a href="about.html">About</a>
-            </li>
-            <li>
-                <a href="contact.html">Contact</a>
-            </li>
-            <!-- Unordered list of navigation links -->
-        </ul>
-    </nav>
-</header>
+        <div class="apod-container">
+            <h1 class="title-center">Astronomy Picture of the Day</h1>
+            <!-- Container for Astronomy Picture of the Day content -->
+            <div class="apod-content">
+                <img id="apod-image" alt="Astronomy Picture of the Day">
+                <iframe id="apod-video" width="560" height="315" frameborder="0" allowfullscreen></iframe>
+                <!-- <video id="apod-video" controls poster=""></video> -->
+                <p id="apod-title"></p>
+                <p id="apod-explanation"></p>
 
-<main class="main-container">
-    <div class="calendar-container">
-        <div id='calendar'></div>
-        
-        <div id="countdown">
-            <p id ="countdown-prompt">Countdown to My Birthday:</p>
-            <p id="countdown-display">Calculating...</p>
+                <!-- <picture>
+                    <source srcset="apod-image.webp" type="image/webp">
+                    <img src="apod-image.jpg" alt="Astronomy Picture of the Day">
+                </picture> -->
+
+                <!-- Elements for displaying APOD content -->
+            </div>
         </div>
-    </div>
 
-    <div class="apod-container">
-        <h1 class="title-center">Astronomy Picture of the Day</h1>
-        <!-- Container for Astronomy Picture of the Day content -->
-        <div class="apod-content">
-            <img id="apod-image" alt="Astronomy Picture of the Day">
-            <iframe id="apod-video" width="560" height="315" frameborder="0" allowfullscreen></iframe>
-            <!-- <video id="apod-video" controls poster=""></video> -->
-            <p id="apod-title"></p>
-            <p id="apod-explanation"></p>
-            <!-- Elements for displaying APOD content -->
-        </div>
-    </div>
-
-    <div class="hero-container" id="hero"> 
-        <div class="hero-content">
-            <!-- Hero section content goes here -->
-            <h1 class="hero-title">Welcome to our Website</h1>
-            <!-- <p class="hero-description">Discover the wonders of the universe and celebrate life with us!</p>
+        <div class="hero-container" id="hero">
+            <div class="hero-content">
+                <!-- Hero section content goes here -->
+                <h1 class="hero-title">Welcome to our Website</h1>
+                <!-- <p class="hero-description">Discover the wonders of the universe and celebrate life with us!</p>
             <a class="hero-button" href="#explore">Explore Now</a> -->
+            </div>
         </div>
-    </div>
-</main>
-
-<section class="projects-container" id="projects">
-    <main class="projects-content">
-        <article class="projects-item">
-            <h3>Data Breaches Analysis</h3>
-            <p>An investigation and analysis of data breaches that occured from 2004 to 2021.</p>
-            <p><a href="https://github.com/alex431/Data-Breaches-Analysis" class="btn">View on GitHub &raquo;</a></p>
-        </article>
-
-        <article class="projects-item">
-            <h3>Facebook Stock Analysis</h3>
-            <p>An investigation and analysis of Facebook stocks during data breaches. </p>
-            <p><a href="https://github.com/alex431/Facebook-Stock-Analysis" class="btn">View on GitHub &raquo;</a></p>
-        </article>
     </main>
-</section>
 
-<footer>
-    <p>&copy; 2023 Alex Hinkle's Portfolio. All rights reserved.</p>
-    <!-- Footer with copyright information -->
-</footer>
+    <section class="projects-container" id="projects">
+        <main class="projects-content">
+            <article class="projects-item">
+                <h3>Data Breaches Analysis</h3>
+                <p>An investigation and analysis of data breaches that occured from 2004 to 2021.</p>
+                <p><a href="https://github.com/alex431/Data-Breaches-Analysis" class="btn">View on GitHub &raquo;</a>
+                </p>
+            </article>
+
+            <article class="projects-item">
+                <h3>Facebook Stock Analysis</h3>
+                <p>An investigation and analysis of Facebook stocks during data breaches. </p>
+                <p><a href="https://github.com/alex431/Facebook-Stock-Analysis" class="btn">View on GitHub &raquo;</a>
+                </p>
+            </article>
+        </main>
+    </section>
+
+    <footer>
+        <p>&copy; 2023 Alex Hinkle's Portfolio. All rights reserved.</p>
+        <!-- Footer with copyright information -->
+    </footer>
 </body>
+
 </html>

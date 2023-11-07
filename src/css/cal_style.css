@@ -24,7 +24,7 @@
   border: none;     /* Remove the border */
   outline: none;    /* Remove the focus outline */
   color: #000;    /* Set the text color to black */
-  padding: 0px;     /* Remove any padding */
+  padding: 0;     /* Remove any padding */
 }
 
 /* Styles for navigation button focus within #calendar */
@@ -35,12 +35,12 @@
   box-shadow: none; /* Remove any box shadow on focus */
 }
 
-/* Styles for specific button within #calendar */
+/* Styles for specific button within #calendar
 #calendar .fc-dayGridMonth-button
 {
-  outline: none; /* Remove the focus outline for this specific button */
-  box-shadow: none;  /* Remove any box shadow on focus for this specific button */ 
-}
+  outline: none; Remove the focus outline for this specific button
+  box-shadow: none;  Remove any box shadow on focus for this specific button 
+} */
 
 /* Styles for calendar header cells */
 #calendar .fc-col-header-cell-cushion
@@ -58,7 +58,7 @@
 }
 
 /* Media query for screens with a max-width of 1120px */
-@media (max-width: 1120px) 
+@media (width <= 1120px) 
 {
   .calendar-container 
   {
@@ -72,7 +72,7 @@
     max-width: 100%; 
   }
 
-    /* Adjust styles for smaller screens */
+  /* Adjust styles for smaller screens */
   .calendar-container.active 
   {
     display: none; /* Hide the calendar container when it has the 'active' class */

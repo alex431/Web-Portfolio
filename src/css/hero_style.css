@@ -1,15 +1,16 @@
 /* Styles for .main-container */
 .main-container
 {    
-    background: url('../img/pexels-markus-spiske-1089438.jpg') center center no-repeat; /* Set a background image centered with no repeat */
-    background-size: cover; /* Cover the container with the background image */
+    background: url('../img/pexels-markus-spiske-1089438.webp') center center no-repeat,
+        url('../img/pexels-markus-spiske-1089438.jpg')  center center no-repeat; /* Set a background image centered with no repeat */
+    
+    background-size: cover; /* Cover the container with the background image */   
 }
-
 
 /* Styles for .hero-container */
 .hero-container 
 {
-    background-color: rgba(255, 0, 0, 0.5); /* Apply a red background with 50% opacity (semi-transparent) */
+    background-color: rgb(255 0 0 / 50%); /* Apply a red background with 50% opacity (semi-transparent) */
     padding: 10px; /* Add 10px of padding around the content */    
     display: flex; /* Use a flexbox layout for the container */
     justify-content: center; /* Center content horizontally within the container */

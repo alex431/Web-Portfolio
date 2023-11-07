@@ -4,8 +4,9 @@
     margin: 0;
     padding: 10px;
     background-color: #fff;
-    box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 10px 10px 10px rgb(0 0 0 / 10%);
 }
+
 /* Styling for a container that holds content, like an image and text.
    - Sets a maximum width of 800px.
    - Removes margin.
@@ -20,6 +21,7 @@
     margin-bottom: 5px;
     margin-top: 0;
 }
+
 /* Center-aligns text inside elements with the "centered" class.
    - Used for text alignment.
 */
@@ -57,7 +59,7 @@
 */
 
 
-@media (max-width: 1120px) 
+@media (width <= 1120px) 
 {
     .apod-container 
     {
