@@ -111,6 +111,15 @@ Note: Both commands will produce seperate folder, 'dist' that contains the bundl
 
 Note: The main browsers used in the development of this portfolio website are brave and edge.
 
+<div align="center">or</div>
+<br>
+
+This command will run the project on port 8080.
+```
+npm run serve
+```
+
+
 ## Current Implemented Features
 *  Calculate and display data based on an external factor
 *  Retrieve data from a third-party API and use it to display something within your app
