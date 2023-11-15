@@ -149,11 +149,11 @@ module.exports = {
 
     hot: true, // Enable hot module replacement
     port: 8080, // Port to run the dev server on (you can change this as needed)
-
-    // historyApiFallback: {
-    //   rewrites: [
-    //     { from: /^\/$/, to: '/html/home.html' },
-    //   ],
-    // },
+    
+    historyApiFallback: {
+      rewrites: [
+        { from: /^\/$/, to: '/html/home.html' },
+      ],
+    },
   },
 };
