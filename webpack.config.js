@@ -1,139 +1,126 @@
 const path = require('path');
-// const webpack = require('webpack');
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const DotenvWebpackPlugin = require('dotenv-webpack');
-const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 
-
-module.exports = {
+module.exports = 
+{
   mode: 'development',
-  entry: {
-
+  
+  // Entry points for different features and styles
+  entry: 
+  {
     apod_feature: ['./src/js/apod.js', './src/css/apod_style.css'],
-    // apod:'./src/js/apod.js',
-    // apod_style: './src/css/apod_style.css',
-
     time_feature: ['./src/js/special_day.js', './src/css/countdown.css'],
-    // special_day: './src/js/special_day.js',
-    // countdown: './src/css/countdown.css',
-
     calendar_feature: ['./src/js/calendar.js', './src/css/cal_style.css'],
-    // calendar:'./src/js/calendar.js',
-    // cal_style: './src/css/cal_style.css', 
-
     nav_feature: ['./src/js/active.js', './src/css/nav_style.css'],
-    // active: './src/js/active.js',
-    // nav_style: './src/css/nav_style.css',
 
     hero_style: './src/css/hero_style.css',
     proj_style: './src/css/proj_style.css',
 
     about_style: './src/css/about_style.css'
-  }, // Adjust the entry point to your main JavaScript file
+  }, 
   
-  output: {
-    path: path.resolve(__dirname, 'dist'), // Output directory for bundled files
-    filename: 'js/[name].js', // Name of the bundled JavaScript file
+  // Output configuration for bundled files
+  output: 
+  {
+    path: path.resolve(__dirname, 'dist'), 
+    filename: 'js/[name].js', 
   },
   
-  plugins: [
-
-    new CleanWebpackPlugin(),
-
-    // new webpack.HotModuleReplacementPlugin(),
-
+  // Plugins for additional tasks in the build process
+  plugins: 
+  [
+    // Load environment variables from a .env file
     new DotenvWebpackPlugin({
       path: './.env',
     }),
 
+    // Extract CSS into separate files
     new MiniCssExtractPlugin({
       filename: 'css/[name].css',
     }),
 
+     // Generate HTML files with injected script and style tags
     new HtmlWebpackPlugin({
-      template: './src/html/home.html', // Path to your HTML template
-      filename: './html/home.html', // Name of the generated HTML file
+      template: './src/html/home.html', 
+      filename: './html/home.html',
       chunks: ['apod_feature', 'time_feature', 'calendar_feature', 'nav_feature', 'hero_style', 'proj_style'],
-      // imgOutputPath: 'img/',
     }),
 
     new HtmlWebpackPlugin({
-      template: './src/html/about.html', // Path to your HTML template
-      filename: './html/about.html', // Name of the generated HTML file
+      template: './src/html/about.html', 
+      filename: './html/about.html', 
       chunks: ['nav_feature','about_style'],
-      // imgOutputPath: 'img/',
     }),
 
     new HtmlWebpackPlugin({
-      template: './src/html/contact.html', // Path to your HTML template
-      filename: './html/contact.html', // Name of the generated HTML file
+      template: './src/html/contact.html', 
+      filename: './html/contact.html', 
       chunks: ['nav_feature'],
     }),
   ],
 
-  module: {
-    rules: [
+  // Module rules for handling different file types
+  module: 
+  {
+    rules: 
+    [
       {
         test: /\.js$/,
         exclude: /node_modules/,
-        use: {
+        use: 
+        {
           loader: 'babel-loader',
-          options: {
+          options: 
+          {
             presets: ['@babel/preset-env'],
           },
         },
       },
 
+      // Process CSS files
       {
         test: /\.css$/,
-        use: [
-          // 'style-loader',
+        use: 
+        [
           MiniCssExtractPlugin.loader,
           'css-loader'
         ],
       },
 
+      // Process image files
       {
         test: /\.(png|jpg|jpeg|webp)$/i,
         type: 'asset/resource',
-        generator: {
+        generator: 
+        {
           filename: 'img/[name].[ext]',
         },
       },
 
+      // Process HTML files
       {
         test: /\.html$/,
-        use: [
+        use: 
+        [
           {
             loader: 'html-loader',
-            options: {
+            options: 
+            {
               minimize: false, // You may want to enable this in production
             },
           },
         ],
-      },
-
-      // {
-      //   test: /\.(png|jpg|jpeg|webp)$/i,
-      //   include: path.resolve(__dirname,'src/img'),
-      //   // exclude: path.resolve(__dirname, 'src/html'),
-      //     use: [
-      //     {
-      //       loader: 'file-loader', 
-      //       options: {
-      //         name: '[name].[ext]',
-      //         outputPath: 'img', // This is the output directory where the image will be placed
-      //       },
-      //     },
-      //   ],
-      // },
-      
+      },  
     ],
   },
 
-  resolve: {
-    fallback: {
+  // Resolve configuration for fallback modules
+  resolve: 
+  {
+    fallback: 
+    {
       path: require.resolve('path-browserify'),
       os: require.resolve('os-browserify/browser'),
       crypto: require.resolve('crypto-browserify'),
@@ -142,16 +129,20 @@ module.exports = {
     },
   },
 
-  devServer: {
-    static: {
-      directory: path.join(__dirname, 'dist'), // The root directory for your server
+  // Development server configuration
+  devServer: 
+  {
+    static: 
+    {
+      directory: path.join(__dirname, 'dist'), 
     },
 
     hot: true, // Enable hot module replacement
-    port: 8080, // Port to run the dev server on (you can change this as needed)
-    
-    historyApiFallback: {
-      rewrites: [
+    port: 8080,  // Port to run the dev server on
+    historyApiFallback: 
+    {
+      rewrites:
+      [
         { from: /^\/$/, to: '/html/home.html' },
       ],
     },

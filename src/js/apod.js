@@ -6,21 +6,30 @@ const apodUrl = `https://api.nasa.gov/planetary/apod?api_key=${apiKey}`;
 
 // An asynchronous function to fetch and display the APOD image
 async function loadAPOD() {
-  try {
+  try 
+  {
     // Fetch data from the APOD API and await the response
     const response = await fetch(apodUrl);
-    if (!response.ok) {
+    
+    // Check if the response is successful; if not, throw an error
+    if (!response.ok) 
+    {
       throw new Error('Failed to fetch APOD data');
     }
 
+    // Parse the response JSON data
     const data = await response.json();
 
     // Update the 'src' attribute of the 'apod-image' element with the APOD image URL
-    if (data.media_type === 'image') {
+    if (data.media_type === 'image') 
+    {
+      // Display the image and hide the video element
       document.getElementById('apod-image').src = data.url;
       document.getElementById('apod-video').style.display = 'none';
     }
-    else if (data.media_type === 'video') {
+    else if (data.media_type === 'video') 
+    {
+      // Display the video and hide the image element
       const apod_video = document.getElementById('apod-video');
       apod_video.src = data.url;
 
@@ -32,7 +41,9 @@ async function loadAPOD() {
     document.getElementById('apod-title').textContent = data.title;
     document.getElementById('apod-explanation').textContent = data.explanation;
   }
-  catch (error) {
+  catch (error) 
+  {
+    // Handle errors by logging to the console
     console.error('Error fetching or displaying APOD data: ', error);
   }
 }

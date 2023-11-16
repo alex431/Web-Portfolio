@@ -2,36 +2,29 @@
 <html lang="en">
 
 <head>
+    <!-- Meta tags for character set and viewport -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>
         Homepage
     </title>
 
+    <!-- Preconnect link for faster API requests -->
     <link rel="preconnect" href="https://api.nasa.gov" crossorigin="anonymous">
-    <!-- <link rel="dns-prefetch" href="//api.nasa.gov"> -->
-
-    <!-- <link rel="stylesheet" href="../css/nav_style.css">
-    <link rel="stylesheet" href="../css/proj_style.css">
-    <link rel="stylesheet" href="../css/hero_style.css">
-    <link rel="stylesheet" href="../css/cal_style.css">
-    <link rel="stylesheet" href="../css/countdown.css">
-    <link rel="stylesheet" href="../css/apod_style.css"> -->
-
-
 </head>
 
 <body>
+     <!-- Header section with navigation -->
     <header id="top-header">
         <nav id="top-nav">
-            <!-- Create a header and navigation section -->
+            <!-- Hamburger menu icon -->
             <div class="hamburger">
                 <span></span>
                 <span></span>
                 <span></span>
-                <!-- Hamburger menu icon with three spans -->
             </div>
 
+             <!-- Navigation links -->
             <ul class="nav-links">
                 <li>
                     <a href="home.html">Home</a>
@@ -42,52 +35,46 @@
                 <li>
                     <a href="contact.html">Contact</a>
                 </li>
-                <!-- Unordered list of navigation links -->
             </ul>
         </nav>
     </header>
 
+    <!-- Main content section -->
     <main class="main-container">
+         <!-- Calendar and countdown section -->
         <div class="calendar-container">
             <div id="calendar"></div>
-
             <div id="countdown">
                 <p id="countdown-prompt">Countdown to My Birthday:</p>
                 <p id="countdown-display">Calculating...</p>
             </div>
         </div>
 
+        <!-- Astronomy Picture of the Day (APOD) section -->
         <div class="apod-container">
             <h1 class="title-center">Astronomy Picture of the Day</h1>
-            <!-- Container for Astronomy Picture of the Day content -->
             <div class="apod-content">
+                <!-- APOD content elements -->
                 <img id="apod-image" alt="Astronomy Picture of the Day">
                 <iframe id="apod-video" width="560" height="315" frameborder="0" allowfullscreen></iframe>
-                <!-- <video id="apod-video" controls poster=""></video> -->
                 <p id="apod-title"></p>
                 <p id="apod-explanation"></p>
-
-                <!-- <picture>
-                    <source srcset="apod-image.webp" type="image/webp">
-                    <img src="apod-image.jpg" alt="Astronomy Picture of the Day">
-                </picture> -->
-
-                <!-- Elements for displaying APOD content -->
             </div>
         </div>
 
+        <!-- Hero section -->
         <div class="hero-container" id="hero">
             <div class="hero-content">
                 <!-- Hero section content goes here -->
                 <h1 class="hero-title">Welcome to our Website</h1>
-                <!-- <p class="hero-description">Discover the wonders of the universe and celebrate life with us!</p>
-            <a class="hero-button" href="#explore">Explore Now</a> -->
             </div>
         </div>
     </main>
 
+    <!-- Projects section -->
     <section class="projects-container" id="projects">
         <main class="projects-content">
+            <!-- Project items -->
             <article class="projects-item">
                 <h3>Data Breaches Analysis</h3>
                 <p>An investigation and analysis of data breaches that occured from 2004 to 2021.</p>
@@ -103,15 +90,10 @@
             </article>
         </main>
     </section>
-
+    
+    <!-- Footer section -->
     <footer>
         <p>&copy; 2023 Alex Hinkle's Portfolio. All rights reserved.</p>
-        <!-- Footer with copyright information -->
     </footer>
-
-    <!-- <script src="../js/active.js"></script>
-    <script src="../js/apod.js"></script>
-    <script src="../js/calendar.js"></script>
-    <script src="../js/special_day.js"></script> -->
 </body>
 </html>
