@@ -35,19 +35,12 @@
   box-shadow: none; /* Remove any box shadow on focus */
 }
 
-/* Styles for specific button within #calendar
-#calendar .fc-dayGridMonth-button
-{
-  outline: none; Remove the focus outline for this specific button
-  box-shadow: none;  Remove any box shadow on focus for this specific button 
-} */
-
 /* Styles for calendar header cells */
 #calendar .fc-col-header-cell-cushion
 {
   display: flex;  /* Use flexbox for layout */
   justify-content: center;  /* Center content horizontally */
-  align-items: center;       /* Center content vertically */
+  align-items: center; /* Center content vertically */
 }
 
 #calendar .fc-header-toolbar

@@ -2,10 +2,11 @@ const path = require('path');
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const DotenvWebpackPlugin = require('dotenv-webpack');
+const {CleanWebpackPlugin} = require('clean-webpack-plugin');
 
-module.exports = 
+module.exports =
 {
-  mode: 'development',
+  mode: 'development', 
   
   // Entry points for different features and styles
   entry: 
@@ -17,8 +18,8 @@ module.exports =
 
     hero_style: './src/css/hero_style.css',
     proj_style: './src/css/proj_style.css',
-
-    about_style: './src/css/about_style.css'
+    about_style: './src/css/about_style.css',
+    contact_style: './src/css/contact_style.css',
   }, 
   
   // Output configuration for bundled files
@@ -31,6 +32,9 @@ module.exports =
   // Plugins for additional tasks in the build process
   plugins: 
   [
+    // Clean the 'dist' directory before each build
+    new CleanWebpackPlugin(),
+
     // Load environment variables from a .env file
     new DotenvWebpackPlugin({
       path: './.env',
@@ -44,20 +48,20 @@ module.exports =
      // Generate HTML files with injected script and style tags
     new HtmlWebpackPlugin({
       template: './src/html/home.html', 
-      filename: './html/home.html',
+      filename: 'html/home.html',
       chunks: ['apod_feature', 'time_feature', 'calendar_feature', 'nav_feature', 'hero_style', 'proj_style'],
     }),
 
     new HtmlWebpackPlugin({
       template: './src/html/about.html', 
-      filename: './html/about.html', 
+      filename: 'html/about.html', 
       chunks: ['nav_feature','about_style'],
     }),
 
     new HtmlWebpackPlugin({
       template: './src/html/contact.html', 
-      filename: './html/contact.html', 
-      chunks: ['nav_feature'],
+      filename: 'html/contact.html', 
+      chunks: ['nav_feature','contact_style'],
     }),
   ],
 
@@ -129,22 +133,27 @@ module.exports =
     },
   },
 
-  // Development server configuration
-  devServer: 
-  {
-    static: 
-    {
-      directory: path.join(__dirname, 'dist'), 
-    },
+  // // Development server configuration
+  // devServer: 
+  // {
+  //   static: 
+  //   {
+  //     directory: path.join(__dirname, 'dist'), 
+  //   },
+  
+  //   hot: true, // Enable hot module replacement
+  //   port: 8080,  // Port to run the dev server on
 
-    hot: true, // Enable hot module replacement
-    port: 8080,  // Port to run the dev server on
-    historyApiFallback: 
-    {
-      rewrites:
-      [
-        { from: /^\/$/, to: '/html/home.html' },
-      ],
-    },
-  },
+  //   historyApiFallback: 
+  //   {
+  //     rewrites:
+  //     [
+  //       { from: /^\/$/, to: '/html/home.html' },
+  //       {from: /^\/home/, to: '/html/home.html'},
+  //       {from: /^\/about/, to: '/html/about.html'},
+  //       {from: /^\/contact/, to: '/html/contact.html'},
+  //     ],
+  //   },
+  // },
+
 };

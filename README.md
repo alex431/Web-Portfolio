@@ -35,32 +35,6 @@ npm install
 ```
 Note: The package.json file is typically found in the project's root folder. 
 
-<!-- This command will install the package in question and all of its dependencies locally within the project's node_modules directory. -->
-
-<!-- ```
-npm install [package]
-``` -->
-
-<!-- <u>Required Packages</u>
-* babel-loader
-* @babel/core
-* @babel/preset-env
-* webpack
-* webpack-cli
-* html-webpack-plugin
-* style-loader
-* css-loader
-* os-browserify
-* path-browserify
-* stream-browserify
-* crypto-browserify
-* buffer
-* dotenv 
-* donenv-webpack
-* @fullcalendar/core
-* @fullcalendar/interaction
-* @fullcalendar/daygrid -->
-
 ### Nasa APIs key Provisioning
 * Visit https://api.nasa.gov/ 
 * Enter the following information:
@@ -84,43 +58,33 @@ You should receive an email with the associated email address within a few minut
     * Associated with environmental variables
     * Utilized for holding API keys     
 
-3. You can run either command inside a terminal of visual studio code to build the project using webpack.
+3. You can run the command inside a terminal of visual studio code to build the project using webpack.
 
-This command runs the custom portfolio script to build the project defined in the package.json file.  
+This command  will run the custom portfolio script to build the project defined in the package.json file.  
 
 ```
 npm run portfolio
 ```
 
-
-<div align="center">or</div>
-<br>
-
-This command will search for the 'webpack' binary in the project's dependencies.
-
-```
-npx webpack
-```
-
-Note: Both commands will produce seperate folder, 'dist' that contains the bundled code. The CSS files are injected into javascript files. 
+Note: Running this command will produce seperate folder, 'dist' that contains the bundled code.  
 
 ## Steps for Running the Project
-1. Locate the 'dist' folder
-2. Navigate to the 'html' folder within the 'dist' folder
-3. Open 'home.html' file with any web browser.
 
-Note: The main browsers used in the development of this portfolio website are brave and edge.
-
-<div align="center">or</div>
-<br>
-
-This command will run the project on port 8080.
+This command will run the project on port 3000.
 ```
-npm run serve
+npm run koa
 ```
 
 
 ## Current Implemented Features
 *  Calculate and display data based on an external factor
+    - Located within the calendar-container on the home.html page
+    - Used my birthday as the desired day
 *  Retrieve data from a third-party API and use it to display something within your app
+    - Located within the apod-container on the home.html page
+    - Fetches data from the Astromomy Picture of the Day or APOD's API 
 *  Implement modern interactive UI features (e.g. table/data sorting, autocomplete, drag-and-drop,calendar-date-picker, etc).
+    - Located within the calendar-container on the home.html page
+    - Imported and customize FullCalendar
+    - Dynamically tied the day selected by the user to the countdown to my birthday 
+

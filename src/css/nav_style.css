@@ -53,8 +53,10 @@ footer > p
   padding-left: 5px;
 }
 
+/* Media Query for screens with width less than or equal to 768px */
 @media screen and (width <= 768px) 
-{  /* Styles for the hamburger menu */ 
+{  
+  /* Styles for the hamburger menu */ 
   .hamburger 
   {
     display: flex;
@@ -113,11 +115,3 @@ footer > p
     color: #E34234; /* Change link color when active */
   }
 }
-
-    
-
-
-
-
-
-

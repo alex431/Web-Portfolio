@@ -1,6 +1,6 @@
 .apod-container 
 {
-    max-width: 800px;
+    max-width: 400px;
     margin: 0;
     padding: 10px;
     background-color: #fff;
@@ -57,7 +57,6 @@
 /* Styling for an element with the ID "apod-explanation."
    - Removes margin to control spacing around the explanation text.
 */
-
 
 @media (width <= 1120px) 
 {

@@ -1,21 +1,27 @@
 /* Styles for .main-container */
 .main-container
-{    
+{   
     background: url('../img/pexels-markus-spiske-1089438.webp') center center no-repeat,
         url('../img/pexels-markus-spiske-1089438.jpg')  center center no-repeat; /* Set a background image centered with no repeat */
     
     background-size: cover; /* Cover the container with the background image */   
 }
 
+.apod-hero-container
+{
+    display: flex;
+}
+
 /* Styles for .hero-container */
 .hero-container 
 {
     background-color: rgb(255 0 0 / 50%); /* Apply a red background with 50% opacity (semi-transparent) */
-    padding: 10px; /* Add 10px of padding around the content */    
-    display: flex; /* Use a flexbox layout for the container */
-    justify-content: center; /* Center content horizontally within the container */
-    flex-direction: column; /* Align content in a column layout */
-    align-items: center;   /* Center content vertically within the container */
+    padding: 10px; /* Add 10px of padding around the content */  
+    display: flex; 
+    justify-content: center; 
+    flex-direction: column;
+    align-items: center;   
+    width: 100%;
 }
 
 /* Styles for .hero-content */
@@ -24,3 +30,10 @@
     text-align: center; /* Center the text content within the hero container */
 }
 
+/* Media query for screens with a max-width of 1120px */
+@media (width <= 1120px) 
+{
+  /* .apod-hero-container{
+    flex-direction: column-reverse;
+  } */
+}

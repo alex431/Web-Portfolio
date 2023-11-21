@@ -1,68 +1,45 @@
+/* Styles for the container holding projects */
 .projects-container 
 {
-    background: #232443;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 48px 0;
+    background: #232443; /* Sets a dark background color (#232443) */
+    display: flex; /* Utilizes flexbox for layout */
+    justify-content: center; /* Centers content horizontally */
+    align-items: center; /* Centers content vertically */
+    padding: 48px 0; /* Adds padding of 48px at the top and bottom */
 }
 
-/* Styling for a container that holds projects.
-   - Sets a dark background color (#232443).
-   - Uses flexbox to center its content both horizontally and vertically.
-   - Adds padding of 48px at the top and bottom.
-*/
-
+/* Styles for the content within the projects container */
 .projects-content 
 {
-    color: #F1F1F1;
-    width: 100%;
-    max-width: 1000px;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    padding: 12px;
+    color: #F1F1F1; /* Sets the text color to a light color (#F1F1F1) */
+    width: 100%; /* Takes up 100% of the available width */
+    max-width: 1000px; /* Specifies a maximum width of 1000px and makes it responsive */
+    display: flex; /* Utilizes flexbox for layout */
+    flex-direction: row; /* Arranges content in a row */
+    justify-content: space-between; /* Distributes space evenly between items */
+    align-items: center; /* Centers content vertically */
+    padding: 12px; /* Adds 12px of padding to the content */
 }
 
-/* Styles for the content within the projects container.
-   - Sets the text color to a light color (#F1F1F1).
-   - Specifies a maximum width of 1000px and makes it responsive.
-   - Uses flexbox to arrange content in a row, space-between layout.
-   - Adds 12px of padding to the content.
-*/
-
+/* Styles for individual project items */
 .projects-item 
 {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
+    display: flex; /* Utilizes flexbox for layout */
+    flex-direction: column; /* Arranges content in a column */
+    align-items: center; /* Centers content horizontally */
+    text-align: center; /* Sets text alignment to center */
 }
 
-/* Styling for individual project items.
-   - Utilizes flexbox for column layout.
-   - Centers the items horizontally and sets text alignment to center.
-   - (Note: The "justify-content" line is commented out, meaning it's not used in this context).
-*/
-
+/* Styles for buttons with the "btn" class */
 .btn
 {
-    display: inline-block;
-    padding: 6px 12px;
-    background-color: #007BFF; /* Change the background color to your preference */
-    color: #fff; /* Change the text color to your preference */
-    text-decoration: none;
-    border: none;
-    border-radius: 6px;
-    text-align: center;
+    display: inline-block; /* Makes the button an inline block element */
+    padding: 6px 12px; /* Specifies padding for internal spacing */
+    background-color: #007BFF; /* Sets background color for the button */
+    color: #fff; /* Sets text color for the button */
+    text-decoration: none; /* Removes the default text decoration */
+    border: none; /* Removes the default button border */
+    border-radius: 6px; /* Adds rounded corners with a border-radius */
+    text-align: center; /* Centers text within the button */
 }
 
-/* Styling for buttons with the "btn" class.
-   - Makes the button an inline block element.
-   - Specifies padding for internal spacing.
-   - Sets background color and text color for the button. You can customize these colors.
-   - Removes the default button styling (border and text decoration).
-   - Adds rounded corners with a border-radius.
-   - Centers text within the button.
-*/
