@@ -4,8 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "portfolio": "webpack --config webpack.config.cjs",
-    "koa": "node koa.cjs",
+    "portfolio": "webpack --config webpack.config.js",
+    "koa": "node koa.js",
     "serve": "webpack serve --open",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
