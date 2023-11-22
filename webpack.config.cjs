@@ -12,8 +12,8 @@ module.exports =
   entry: 
   {
     apod_feature: ['./src/js/apod.js', './src/css/apod_style.css'],
-    time_feature: ['./src/js/special_day.js', './src/css/countdown.css'],
-    calendar_feature: ['./src/js/calendar.js', './src/css/cal_style.css'],
+    time_feature: ['./src/js/special_day.mjs', './src/css/countdown.css'],
+    calendar_feature: ['./src/js/calendar.mjs', './src/css/cal_style.css'],
     nav_feature: ['./src/js/active.js', './src/css/nav_style.css'],
 
     hero_style: './src/css/hero_style.css',

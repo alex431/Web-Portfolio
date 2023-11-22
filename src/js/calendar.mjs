@@ -2,7 +2,7 @@
 import { Calendar } from '@fullcalendar/core';
 import interactionPlugin from '@fullcalendar/interaction';
 import dayGridPlugin from '@fullcalendar/daygrid';
-import { updateCountdown } from './special_day';
+import { updateCountdown } from './special_day.mjs';
 
 // Add an event listener to run the code after the DOM has loaded
 document.addEventListener('DOMContentLoaded', function () {
