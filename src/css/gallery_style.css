@@ -7,7 +7,7 @@
 .cred-column >.thumbnail
 {
     width: 150px;
-    height: 100px;
+    /* height: 100px; */
     padding: 5px;
 }
 
@@ -24,21 +24,43 @@
 
 .cred-column > .codelou 
 {
-    max-width: 100%; /* Ensure the image doesn't exceed its container's width */
+    /* max-width: 100%; Ensure the image doesn't exceed its container's width */
     height: auto;    /* Allow the height to scale proportionally */
 }
 
 .cred-column > .uofl
 {
-    max-width: 80%; /* Ensure the image doesn't exceed its container's width */
+    /* max-width: 80%; Ensure the image doesn't exceed its container's width */
     height: auto;    /* Allow the height to scale proportionally */
 }
 
+#expandedImg 
+{
+    max-width: 90%;
+}
 
-/* .cred-column img.active{
-    border: 2px solid #007BFF;
-    width: 180px;
-    height: 120px;
-} */
+
+@media screen and (max-width: 1680px)
+{
+    .creds-row
+    {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        /* flex-direction: column;  */
+    }
+}    
+
+@media screen and (max-width: 845px)
+{
+    .creds-row
+    {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column; 
+    }
+}
+
 
 

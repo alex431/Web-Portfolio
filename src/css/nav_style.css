@@ -49,15 +49,8 @@ footer
 {
   overflow: hidden;
   background: #ffd700;
-  
-
-  
-  /* background: #FF7518; */
   margin-top: auto; /* Push the footer to the bottom of the page */
   
-  /* height: 100vh; */
-  
-  /* margin-bottom: 0; */
 }
 
 footer > p 

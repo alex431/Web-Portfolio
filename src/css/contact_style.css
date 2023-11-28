@@ -2,12 +2,18 @@
 #contact-container
 {
     display: flex;
+    flex: 1;
     justify-content: space-between;
     align-items: center;
+    min-height: 100vh;
     background: url('../img/nastya-dulhiier-OKOOGO578eo-unsplash.webp') center center no-repeat,
         url('../img/nastya-dulhiier-OKOOGO578eo-unsplash.jpg') center center no-repeat ; 
     background-size: cover;
 
+    /* background-size: 100% 100%; */
+    /* margin: 0;
+    padding: 0; */
+    
     /* Set up a flex container with space between items and centering */
 }
 
@@ -44,6 +50,12 @@
     /* Set up a flex container with space-evenly and centering */
 }
 
+.social-logo img 
+{
+    width: auto;
+    height: 100px;
+}
+
 #github-logo
 {
     background-color: black;
@@ -51,7 +63,7 @@
     /* Set the background color of the GitHub logo to black */
 }
 
-@media (width <= 1120px) 
+@media (max-width: 1120px) 
 {
     #contact-container
     {
