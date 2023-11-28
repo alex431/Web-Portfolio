@@ -11,6 +11,12 @@
     /* Set up a flex container with space between items and centering */
 }
 
+#g-form
+{
+    background-color:	#40e0d0 ;
+}
+
+
 #social-media
 {
     text-align: center;

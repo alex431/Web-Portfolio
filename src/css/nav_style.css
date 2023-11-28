@@ -9,7 +9,8 @@ body
 #top-header
 {
   overflow: hidden;
-  background: #FF7518; /* Set a background color for the header */
+  background: #ffd700;
+  /* background: #FF7518;  Set a background color for the header  */
 }
 
 /* CSS for navigation links */
@@ -23,6 +24,7 @@ body
   float: right;
   padding: 0;
   margin: 0;
+  
 }
 
 #top-nav > .nav-links > li
@@ -34,27 +36,38 @@ body
 {
   text-decoration: none;
   font-size: 18px;
+  color: #000000;
+
 }
 
 #top-nav > .nav-links li:hover
 {
-  background-color: #a45ee5; /* Change background color on hover */
+  background-color: #7DF9FF; /* Change background color on hover */
 }
 
 footer
 {
   overflow: hidden;
-  background: #FF7518;
+  background: #ffd700;
+  
+
+  
+  /* background: #FF7518; */
   margin-top: auto; /* Push the footer to the bottom of the page */
+  
+  /* height: 100vh; */
+  
+  /* margin-bottom: 0; */
 }
 
 footer > p 
 {
   padding-left: 5px;
+  color: #000000;
 }
 
 /* Media Query for screens with width less than or equal to 768px */
-@media screen and (width <= 768px) 
+@media screen and (max-width: 768px) 
 {  
   /* Styles for the hamburger menu */ 
   .hamburger 
@@ -89,6 +102,8 @@ footer > p
     width: 100%;
     height: 100%;
     background-color: #50C878;
+    /* #0BDA51,#98fb98  */
+    
     top: 0;
     left: 0;
     z-index: 1;
@@ -112,6 +127,6 @@ footer > p
 
   #top-nav.active > .nav-links > li > a
   {
-    color: #E34234; /* Change link color when active */
+    color: #000000; /* Change link color when active */
   }
 }

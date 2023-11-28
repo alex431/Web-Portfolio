@@ -15,10 +15,12 @@ module.exports =
     time_feature: ['./src/js/special_day.mjs', './src/css/countdown.css'],
     calendar_feature: ['./src/js/calendar.mjs', './src/css/cal_style.css'],
     nav_feature: ['./src/js/active.js', './src/css/nav_style.css'],
-
     hero_style: './src/css/hero_style.css',
     proj_style: './src/css/proj_style.css',
+    
     about_style: './src/css/about_style.css',
+    cred_showcase: ['./src/js/cred_enlarge.js','./src/css/gallery_style.css'],
+    
     contact_style: './src/css/contact_style.css',
   }, 
   
@@ -55,7 +57,7 @@ module.exports =
     new HtmlWebpackPlugin({
       template: './src/html/about.html', 
       filename: 'html/about.html', 
-      chunks: ['nav_feature','about_style'],
+      chunks: ['nav_feature','about_style','cred_showcase'],
     }),
 
     new HtmlWebpackPlugin({
