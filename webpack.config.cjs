@@ -41,6 +41,7 @@ module.exports =
     new DotenvWebpackPlugin({
       path: './.env',
     }),
+    
 
     // Extract CSS into separate files
     new MiniCssExtractPlugin({
@@ -135,27 +136,26 @@ module.exports =
     },
   },
 
-  // // Development server configuration
-  // devServer: 
-  // {
-  //   static: 
-  //   {
-  //     directory: path.join(__dirname, 'dist'), 
-  //   },
+  // Development server configuration
+  devServer: 
+  {
+    static: 
+    {
+      directory: path.join(__dirname, 'dist'), 
+    },
   
-  //   hot: true, // Enable hot module replacement
-  //   port: 8080,  // Port to run the dev server on
+    hot: true, // Enable hot module replacement
+    port: 8080,  // Port to run the dev server on
 
-  //   historyApiFallback: 
-  //   {
-  //     rewrites:
-  //     [
-  //       { from: /^\/$/, to: '/html/home.html' },
-  //       {from: /^\/home/, to: '/html/home.html'},
-  //       {from: /^\/about/, to: '/html/about.html'},
-  //       {from: /^\/contact/, to: '/html/contact.html'},
-  //     ],
-  //   },
-  // },
-
+    historyApiFallback: 
+    {
+      rewrites:
+      [
+        { from: /^\/$/, to: '/html/home.html' },
+        {from: /^\/home/, to: '/html/home.html'},
+        {from: /^\/about/, to: '/html/about.html'},
+        {from: /^\/contact/, to: '/html/contact.html'},
+      ],
+    },
+  },
 };
