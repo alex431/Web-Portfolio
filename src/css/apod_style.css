@@ -58,7 +58,7 @@
    - Removes margin to control spacing around the explanation text.
 */
 
-@media (width <= 1120px) 
+@media screen and (max-width: 1120px) 
 {
     .apod_container 
     {
