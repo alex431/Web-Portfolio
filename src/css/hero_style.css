@@ -16,7 +16,7 @@
 .hero_container 
 {
     /* background-color: rgb(255 0 0 / 50%); Apply a red background with 50% opacity (semi-transparent) */
-    padding: 0 10px 0 10px ; /* Add 10px of padding around the content */  
+    /* padding: 0 10px 0 10px ; Add 10px of padding around the content   */
     display: flex; 
     justify-content: center; 
     /* flex-direction: column; */
@@ -29,6 +29,7 @@
 /* Styles for .hero_content */
 .hero_content 
 {
+    padding: 10px;
     /* text-align: center; Center the text content within the hero container */
     /* background: rgba(0, 0, 0, 0.3); */
 }
@@ -38,7 +39,10 @@
     text-align: center;
 }
 
-
+#greeting, #philosophy
+{
+    text-indent: 20px;
+}
 
 
 
@@ -48,11 +52,6 @@
   .apod_hero_container
   {
     flex-direction: column-reverse;
-  }
-
-  .hero_container
-  {
-
   }
 
 }

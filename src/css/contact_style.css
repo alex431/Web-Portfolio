@@ -63,6 +63,11 @@
     /* Set the background color of the GitHub logo to black */
 }
 
+#contact_section{
+    background: #ffffff;
+    text-align: center;
+  }
+
 @media (max-width: 1120px) 
 {
     #contact_container
