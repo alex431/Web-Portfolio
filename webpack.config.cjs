@@ -102,7 +102,7 @@ module.exports =
         type: 'asset/resource',
         generator: 
         {
-          filename: 'img/[name].[ext]',
+          filename: 'img/[name][ext]',
         },
       },
 

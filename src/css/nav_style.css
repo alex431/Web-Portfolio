@@ -14,7 +14,7 @@ body
 }
 
 /* CSS for navigation links */
-#top-nav > .nav-links 
+#top_nav > .nav_links 
 {
   display: flex;
   flex-direction: row;
@@ -27,12 +27,12 @@ body
   
 }
 
-#top-nav > .nav-links > li
+#top_nav > .nav_links > li
 {
   padding: 7px 4px;
 }
 
-#top-nav > .nav-links > li > a
+#top_nav > .nav_links > li > a
 {
   text-decoration: none;
   font-size: 18px;
@@ -40,7 +40,7 @@ body
 
 }
 
-#top-nav > .nav-links li:hover
+#top_nav > .nav_links li:hover
 {
   background-color: #7DF9FF; /* Change background color on hover */
 }
@@ -81,13 +81,13 @@ footer > p
     transition: background-color 0.3s ease-in-out; /* Smooth transition */
   }
 
-  #top-nav > .nav-links
+  #top_nav > .nav_links
   {
     display: none; /* Hide the navigation links by default */
   }     
     
   /* Styles for the navigation when it's active (visible) */
-  #top-nav.active 
+  #top_nav.active 
   {
     display: flex; 
     flex-direction: column;
@@ -102,13 +102,13 @@ footer > p
     z-index: 1;
   }
 
-  #top-nav.active .hamburger > span
+  #top_nav.active .hamburger > span
   {
     background-color: transparent; /* Hide the hamburger menu bars */
     transition: background-color 0.3s ease-in-out;
   }
     
-  #top-nav.active > .nav-links 
+  #top_nav.active > .nav_links 
   {
     display: flex;
     flex-direction: column;
@@ -118,7 +118,7 @@ footer > p
       
   }
 
-  #top-nav.active > .nav-links > li > a
+  #top_nav.active > .nav_links > li > a
   {
     color: #000000; /* Change link color when active */
   }

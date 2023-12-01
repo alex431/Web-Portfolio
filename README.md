@@ -68,10 +68,10 @@ NASA APIs.
 #### Steps to use a .env file 
 1. Navigate to src/js/apod.js
 2. Open apod.js
-3. Use the following syntax to assign the chosen 'variable name' to apiKey: 
+3. Use the following syntax to assign the chosen 'variable name' to api_key: 
 
 ```
-const apiKey = process.env.[variable_name];
+const api_key = process.env.[variable_name];
 ```
 #### Steps to update Webpack to use .env file
 1. Open webpack.config.cjs
@@ -143,13 +143,13 @@ dist/html/home.html
          
 ## Current Implemented Features
 *  Calculate and display data based on an external factor
-    - Located within the calendar-container on the home.html page
+    - Located within the calendar_container on the home.html page
     - Used a combination of esm and vanilla javascript to write two functions
         * The first function determines if the current day is on or passes a specific hardcoded day
         * The second function calculates the number of days remaining between the current or selected day and the specific hardcoded day. Then, it displays the number of remaining days in the 'coundown-display'
     - Used my birthday as the specific hardcoded day
 *  Retrieve data from a third-party API and use it to display something within your app
-    - Located within the apod-container on the home.html page
+    - Located within the apod_container on the home.html page
     - Utilized API key and stored it in an .env file
     - Fetches data from the Astromomy Picture of the Day or APOD's API
         * Occasionally, there will be video as opposed to an image.
@@ -157,8 +157,8 @@ dist/html/home.html
             - An iframe to hold an video
             - An conditional statement that checks the type of media and displays its contents. 
 *  Implement modern interactive UI features (e.g. table/data sorting, autocomplete, drag-and-drop,calendar-date-picker, etc).
-    - Located within the calendar-container on the home.html page
-    - The user is allowed to select a new date. When a new date is selected, it becomes highlighted in blue. The calculation of the number of remaining days will take into account the selected day and display the new result in 'countdown-display'  
+    - Located within the calendar_container on the home.html page
+    - The user is allowed to select a new date. When a new date is selected, it becomes highlighted in blue. The calculation of the number of remaining days will take into account the selected day and display the new result in 'countdown_display'  
     - The initial date of the calendar-date-picker is the current date. It is highlighted in yellow.
 * Create a node.js web server using a modern framework such as Express.js or Fastify.  Serve at least one route that your app uses (must serve more than just the index.html file).
     - Located in koa.cjs
@@ -166,6 +166,13 @@ dist/html/home.html
         * Used 'koa-static' middleware to serve static files from the 'dist' directory
         * Used 'koa-router' to handle the routes for the '/','/html/home','/html/about'.and '/html/contact'
     - Set up koa to listen on port 3000 and handling cleanup when koa is shutdown 
+* Use arrays, objects, sets or maps to store and retrieve information that is displayed in your app.
+    - Located in cred_enlarge.js
+    - The images array holds the paths' of images.
+    - Used vanilla javascript to add eventlistner to each thumbnail images found in about.html
+    - When an thumbnail is clicked, the display_image function is executed
+        * The displayImages function uses an  index parameter to access apecific element in the images array and assigns it to expand_img variable using template literal
+
 
  
 

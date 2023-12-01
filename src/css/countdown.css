@@ -14,8 +14,8 @@
   margin: 0; /* Remove any default margin */
 }
 
-/* Styles for #countdown-display */
-#countdown-display 
+/* Styles for #countdown_display */
+#countdown_display 
 {
   margin: 0 0 5px; /* Set specific margin values (top, right, bottom, left) */
 }

@@ -13,6 +13,9 @@ const router = new Router();
 // Serve static files from the 'dist' directory
 app.use(serve(path.join(__dirname, 'dist')));
 
+// // Serve static files from the 'dist/img' directory
+// app.use(serve(path.join(__dirname, 'dist/img')));
+
 // Koa routes for history API fallback (optional)
 router.get('/', async (ctx) => {
   

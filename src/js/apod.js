@@ -1,15 +1,15 @@
 // Get the API key from an environment variable (process.env.apod_api_key)
-const apiKey = process.env.apod_api_key;
+const api_key = process.env.apod_api_key;
 
 // Build the URL for the Astronomy Picture of the Day (APOD) API
-const apodUrl = `https://api.nasa.gov/planetary/apod?api_key=${apiKey}`;
+const apod_url = `https://api.nasa.gov/planetary/apod?api_key=${api_key}`;
 
 // An asynchronous function to fetch and display the APOD image
 async function loadAPOD() {
   try 
   {
     // Fetch data from the APOD API and await the response
-    const response = await fetch(apodUrl);
+    const response = await fetch(apod_url);
     
     // Check if the response is successful; if not, throw an error
     if (!response.ok) 
@@ -20,26 +20,26 @@ async function loadAPOD() {
     // Parse the response JSON data
     const data = await response.json();
 
-    // Update the 'src' attribute of the 'apod-image' element with the APOD image URL
+    // Update the 'src' attribute of the 'apod_image' element with the APOD image URL
     if (data.media_type === 'image') 
     {
       // Display the image and hide the video element
-      document.getElementById('apod-image').src = data.url;
-      document.getElementById('apod-video').style.display = 'none';
+      document.getElementById('apod_image').src = data.url;
+      document.getElementById('apod_video').style.display = 'none';
     }
     else if (data.media_type === 'video') 
     {
       // Display the video and hide the image element
-      const apod_video = document.getElementById('apod-video');
+      const apod_video = document.getElementById('apod_video');
       apod_video.src = data.url;
 
       apod_video.style.display = 'block';
-      document.getElementById('apod-image').style.display = 'none';
+      document.getElementById('apod_image').style.display = 'none';
     }
 
-    // Set the text content of the 'apod-title' and 'apod-explanation' elements with APOD data
-    document.getElementById('apod-title').textContent = data.title;
-    document.getElementById('apod-explanation').textContent = data.explanation;
+    // Set the text content of the 'apod_title' and 'apod_explanation' elements with APOD data
+    document.getElementById('apod_title').textContent = data.title;
+    document.getElementById('apod_explanation').textContent = data.explanation;
   }
   catch (error) 
   {

@@ -7,34 +7,52 @@
     background-size: cover; /* Cover the container with the background image */   
 }
 
-.apod-hero-container
+.apod_hero_container
 {
     display: flex;
 }
 
-/* Styles for .hero-container */
-.hero-container 
+/* Styles for .hero_container */
+.hero_container 
 {
     /* background-color: rgb(255 0 0 / 50%); Apply a red background with 50% opacity (semi-transparent) */
-    padding: 10px; /* Add 10px of padding around the content */  
+    padding: 0 10px 0 10px ; /* Add 10px of padding around the content */  
     display: flex; 
     justify-content: center; 
-    flex-direction: column;
+    /* flex-direction: column; */
     align-items: center;   
     width: 100%;
     color: white;
+    /* text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); Add a subtle text shadow for better readability */
 }
 
-/* Styles for .hero-content */
-.hero-content 
+/* Styles for .hero_content */
+.hero_content 
 {
-    text-align: center; /* Center the text content within the hero container */
+    /* text-align: center; Center the text content within the hero container */
+    /* background: rgba(0, 0, 0, 0.3); */
 }
+
+#hero_title, #tagline
+{
+    text-align: center;
+}
+
+
+
+
 
 /* Media query for screens with a max-width of 1120px */
 @media screen and (max-width: 1120px) 
 {
-  .apod-hero-container{
+  .apod_hero_container
+  {
     flex-direction: column-reverse;
   }
+
+  .hero_container
+  {
+
+  }
+
 }

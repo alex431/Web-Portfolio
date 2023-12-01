@@ -1,8 +1,8 @@
-// Import FullCalendar library modules and the updateCountdown function from the special_day module
+// Import FullCalendar library modules and the update_countdown function from the special_day module
 import { Calendar } from '@fullcalendar/core';
 import interactionPlugin from '@fullcalendar/interaction';
 import dayGridPlugin from '@fullcalendar/daygrid';
-import { updateCountdown } from './special_day.mjs';
+import { update_countdown } from './special_day.mjs';
 
 // Add an event listener to run the code after the DOM has loaded
 document.addEventListener('DOMContentLoaded', function () {
@@ -30,23 +30,23 @@ document.addEventListener('DOMContentLoaded', function () {
     // Allow events to be edited
     editable: true, 
     
-    // Allow selecting dates and call the updateCountdown function on selection
+    // Allow selecting dates and call the update_countdown function on selection
     selectable:true,
     select: function (info) {
-      updateCountdown(info.start);
+      update_countdown(info.start);
     },
   });
 
   // Render the calendar on the specified DOM element
   calendar.render();
 
-  // Call the updateCountdown function to initially display the countdown
-  updateCountdown();
+  // Call the update_countdown function to initially display the countdown
+  update_countdown();
 
   // Set a timeout to update the countdown after a specific interval (e.g., every second)
-  setTimeout(() => {
-    updateCountdown();
-  }, 1000);
+  // setTimeout(() => {
+  //   update_countdown();
+  // }, 1000);
 
 });
 

@@ -1,17 +1,17 @@
-.creds-row{
+.creds_row{
     display: flex;
     justify-content: center;
     align-items: center; 
 }
 
-.cred-column >.thumbnail
+.cred_column >.thumbnail
 {
     width: 150px;
     /* height: 100px; */
     padding: 5px;
 }
 
-.cred-column img:hover{
+.cred_column img:hover{
     opacity: 0.8;
     cursor: auto;
 }
@@ -22,19 +22,19 @@
     align-items: center;
 }
 
-.cred-column > .codelou 
+.cred_column > .codelou 
 {
     /* max-width: 100%; Ensure the image doesn't exceed its container's width */
     height: auto;    /* Allow the height to scale proportionally */
 }
 
-.cred-column > .uofl
+.cred_column > .uofl
 {
     /* max-width: 80%; Ensure the image doesn't exceed its container's width */
     height: auto;    /* Allow the height to scale proportionally */
 }
 
-#expandedImg 
+#expanded_img 
 {
     max-width: 90%;
 }
@@ -42,7 +42,7 @@
 
 @media screen and (max-width: 1680px)
 {
-    .creds-row
+    .creds_row
     {
         display: flex;
         justify-content: center;
@@ -53,7 +53,7 @@
 
 @media screen and (max-width: 845px)
 {
-    .creds-row
+    .creds_row
     {
         display: flex;
         justify-content: center;

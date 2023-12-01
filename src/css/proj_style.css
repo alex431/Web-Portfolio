@@ -1,5 +1,5 @@
 /* Styles for the container holding projects */
-.projects-container 
+.projects_container 
 {
     background: #004958; /* Sets a dark background color (#232443) */
     display: flex; /* Utilizes flexbox for layout */
@@ -9,7 +9,7 @@
 }
 
 /* Styles for the content within the projects container */
-.projects-content 
+.projects_content 
 {
     color: #F1F1F1; /* Sets the text color to a light color (#F1F1F1) */
     width: 100%; /* Takes up 100% of the available width */
@@ -22,7 +22,7 @@
 }
 
 /* Styles for individual project items */
-.projects-item 
+.projects_item 
 {
     display: flex; /* Utilizes flexbox for layout */
     flex-direction: column; /* Arranges content in a column */
