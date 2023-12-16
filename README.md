@@ -152,7 +152,7 @@ dist/html/home.html
     - Located within the apod_container on the home.html page
     - Utilized API key and stored it in an .env file
     - Fetches data from the Astromomy Picture of the Day or APOD's API
-        * Occasionally, there will be video as opposed to an image.
+        * Occasionally, there will be an video as opposed to an image.
         * The following accommodations were made upon this discovery:
             - An iframe to hold an video
             - An conditional statement that checks the type of media and displays its contents. 

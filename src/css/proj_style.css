@@ -13,12 +13,12 @@
 {
     color: #F1F1F1; /* Sets the text color to a light color (#F1F1F1) */
     width: 100%; /* Takes up 100% of the available width */
-    max-width: 1000px; /* Specifies a maximum width of 1000px and makes it responsive */
+    /* max-width: 1000px; Specifies a maximum width of 1000px and makes it responsive */
     display: flex; /* Utilizes flexbox for layout */
     flex-direction: row; /* Arranges content in a row */
-    justify-content: space-between; /* Distributes space evenly between items */
+    justify-content: space-evenly; /* Distributes space evenly between items */
     align-items: center; /* Centers content vertically */
-    padding: 12px; /* Adds 12px of padding to the content */
+    /* padding: 12px; Adds 12px of padding to the content */
 }
 
 /* Styles for individual project items */
@@ -28,6 +28,7 @@
     flex-direction: column; /* Arranges content in a column */
     align-items: center; /* Centers content horizontally */
     text-align: center; /* Sets text alignment to center */
+    padding: 5px;
 }
 
 /* Styles for buttons with the "btn" class */

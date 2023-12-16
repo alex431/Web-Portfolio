@@ -63,10 +63,29 @@
     /* Set the background color of the GitHub logo to black */
 }
 
-#contact_section{
+#contact_section
+{
     background: #ffffff;
     text-align: center;
-  }
+    display: flex;
+    flex-direction: column;
+}
+
+#contact_heading  
+{
+    margin: 10px 0;
+}
+
+#contact_phone
+{
+    margin: 0;
+}
+
+#contact_email
+{
+    margin-top: 0;
+    margin-bottom: 8px;
+}
 
 @media (max-width: 1120px) 
 {
@@ -76,10 +95,26 @@
       align-items: center;  
     }
 
+    #g_form
+    {
+      margin: 0 5px;
+      /* max-width: 437px; */
+    }
+
+    #g_form iframe
+    {
+        max-width: 100%;
+    }
+
     #social_media
     {
         margin: 10px auto;
         
+    }
+
+    #contact_section iframe
+    {
+        max-width: 100%;
     }
 
 }

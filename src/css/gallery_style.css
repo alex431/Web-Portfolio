@@ -2,6 +2,7 @@
     display: flex;
     justify-content: center;
     align-items: center; 
+    flex-wrap: wrap;
 }
 
 .cred_column >.thumbnail
@@ -40,18 +41,19 @@
 }
 
 
-@media screen and (max-width: 1680px)
+/* @media screen and (max-width: 1680px)
 {
     .creds_row
     {
         display: flex;
         justify-content: center;
         align-items: center;
-        /* flex-direction: column;  */
+        flex-direction: column; 
+        flex-wrap: wrap;
     }
-}    
+}     */
 
-@media screen and (max-width: 845px)
+/* @media screen and (max-width: 820px)
 {
     .creds_row
     {
@@ -60,7 +62,7 @@
         align-items: center;
         flex-direction: column; 
     }
-}
+} */
 
 
 

@@ -37,10 +37,10 @@ module.exports =
     // Clean the 'dist' directory before each build
     new CleanWebpackPlugin(),
 
-    // Load environment variables from a .env file
-    new DotenvWebpackPlugin({
-      path: './.env',
-    }),
+    // // Load environment variables from a .env file
+    // new DotenvWebpackPlugin({
+    //   path: './.env',
+    // }),
     
 
     // Extract CSS into separate files
@@ -158,4 +158,7 @@ module.exports =
       ],
     },
   },
+
+  devtool: 'source-map'
+
 };

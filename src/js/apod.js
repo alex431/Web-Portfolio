@@ -1,15 +1,17 @@
 // Get the API key from an environment variable (process.env.apod_api_key)
-const api_key = process.env.apod_api_key;
+//  const api_key = process.env.apod_api_key;
 
 // Build the URL for the Astronomy Picture of the Day (APOD) API
-const apod_url = `https://api.nasa.gov/planetary/apod?api_key=${api_key}`;
+// const apod_url = `https://api.nasa.gov/planetary/apod?api_key=${api_key}`;
+
+const endpoint_url= '/api/apod';
 
 // An asynchronous function to fetch and display the APOD image
 async function loadAPOD() {
   try 
   {
     // Fetch data from the APOD API and await the response
-    const response = await fetch(apod_url);
+    const response = await fetch(endpoint_url);
     
     // Check if the response is successful; if not, throw an error
     if (!response.ok) 

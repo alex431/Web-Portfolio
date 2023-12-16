@@ -48,10 +48,11 @@
   margin-bottom: 0.5em; /* Add some margin to the bottom of the header toolbar */
   display: flex; /* Use flexbox for layout */
   justify-content: space-evenly; /* Space elements evenly within the header toolbar */
+  align-items: center;
 }
 
 /* Media query for screens with a max-width of 1120px */
-@media (max-width: 1120px) 
+@media screen and (max-width: 1120px) 
 {
   .calendar_container 
   {
@@ -71,3 +72,13 @@
     display: none; /* Hide the calendar container when it has the 'active' class */
   }
 }
+
+@media screen and (max-width: 400px)
+{
+  .calendar_container
+  {
+  margin: 0 5px;
+  font-size: 10px;
+  }
+}
+
