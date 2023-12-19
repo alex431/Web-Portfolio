@@ -43,11 +43,6 @@ document.addEventListener('DOMContentLoaded', function () {
   // Call the update_countdown function to initially display the countdown
   update_countdown();
 
-  // Set a timeout to update the countdown after a specific interval (e.g., every second)
-  // setTimeout(() => {
-  //   update_countdown();
-  // }, 1000);
-
 });
 
 

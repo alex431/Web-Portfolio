@@ -1,8 +1,3 @@
-// Get the API key from an environment variable (process.env.apod_api_key)
-//  const api_key = process.env.apod_api_key;
-
-// Build the URL for the Astronomy Picture of the Day (APOD) API
-// const apod_url = `https://api.nasa.gov/planetary/apod?api_key=${api_key}`;
 
 const endpoint_url= '/api/apod';
 

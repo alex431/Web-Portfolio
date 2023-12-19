@@ -1,7 +1,7 @@
 // Select the hamburger menu and navigation elements by their CSS selectors
-const hamburger = document.querySelector('.hamburger'); // Selects the hamburger menu icon
-const top_nav = document.querySelector('#top_nav'); // Selects the navigation element
-const calendar = document.querySelector('.calendar_container');
+const hamburger = document.querySelector('.hamburger');                           // Selects the hamburger menu icon
+const top_nav = document.querySelector('#top_nav');                               // Selects the navigation element
+const calendar = document.querySelector('.calendar_container');                   // Selects the calendar container
 
 // Add a click event listener to the hamburger menu icon
 hamburger.addEventListener('click', nav_class_toggle);
