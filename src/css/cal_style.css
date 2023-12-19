@@ -1,53 +1,53 @@
 /* Styles for .calendar_container */
 .calendar_container
 {
-  float: right; /* Float the container to the right */
-  max-width: 380px; /* Set a maximum width for the container */
-  border: 1px solid black; /* Add a border directly to the content */  
+  float: right;                 /* Float the container to the right */
+  max-width: 380px;             /* Set a maximum width for the container */
+  border: 1px solid black;    /* Add a border directly to the content */  
 }
 
 /* Styles for #calendar */
 #calendar 
 {
-  padding: 10px; /* Add padding to create spacing between the content and the border */
-  max-width: 360px; /* Adjust max-width to accommodate the border */
-  text-align: center; /* Center the content within the border */
-  margin: 0 auto; /* Center the elements horizontally */
-  background-color: white; /* Set a white background for the calendar */
+  padding: 10px;                  /* Add padding to create spacing between the content and the border */
+  max-width: 360px;               /* Adjust max-width to accommodate the border */
+  text-align: center;             /* Center the content within the border */
+  margin: 0 auto;                 /* Center the elements horizontally */
+  background-color: white;      /* Set a white background for the calendar */
 }
 
 /* Styles for navigation buttons within #calendar */
 #calendar .fc-prev-button, 
 #calendar .fc-next-button 
 {
-  background: none; /* Remove the background */
-  border: none;     /* Remove the border */
-  outline: none;    /* Remove the focus outline */
-  color: #000;    /* Set the text color to black */
-  padding: 0;     /* Remove any padding */
+  background: none;     /* Remove the background */
+  border: none;         /* Remove the border */
+  outline: none;        /* Remove the focus outline */
+  color: #000;        /* Set the text color to black */
+  padding: 0;           /* Remove any padding */
 }
 
 /* Styles for navigation button focus within #calendar */
 #calendar .fc-prev-button:focus,
 #calendar .fc-next-button:focus 
 {
-  outline: none;    /* Remove the focus outline */
-  box-shadow: none; /* Remove any box shadow on focus */
+  outline: none;        /* Remove the focus outline */
+  box-shadow: none;     /* Remove any box shadow on focus */
 }
 
 /* Styles for calendar header cells */
 #calendar .fc-col-header-cell-cushion
 {
-  display: flex;  /* Use flexbox for layout */
-  justify-content: center;  /* Center content horizontally */
-  align-items: center; /* Center content vertically */
+  display: flex;                /* Use flexbox for layout */
+  justify-content: center;      /* Center content horizontally */
+  align-items: center;          /* Center content vertically */
 }
 
 #calendar .fc-header-toolbar
 {
-  margin-bottom: 0.5em; /* Add some margin to the bottom of the header toolbar */
-  display: flex; /* Use flexbox for layout */
-  justify-content: space-evenly; /* Space elements evenly within the header toolbar */
+  margin-bottom: 0.5em;             /* Add some margin to the bottom of the header toolbar */
+  display: flex;                    /* Use flexbox for layout */
+  justify-content: space-evenly;    /* Space elements evenly within the header toolbar */
   align-items: center;
 }
 
@@ -56,29 +56,30 @@
 {
   .calendar_container 
   {
-    float: none; /* Remove the float property */
-    background-color: white; /* Set a white background for the container */
-    margin: 0 auto; /* Center the container horizontally */
+    float: none;                    /* Remove the float property */
+    background-color: white;      /* Set a white background for the container */
+    margin: 0 auto;                 /* Center the container horizontally */
   }
 
   #calendar
   {
-    max-width: 100%; 
+    max-width: 100%;    /* Adjust max-width for smaller screens */
   }
 
   /* Adjust styles for smaller screens */
   .calendar_container.active 
   {
-    display: none; /* Hide the calendar container when it has the 'active' class */
+    display: none;      /* Hide the calendar container when it has the 'active' class */
   }
 }
 
+/* Media query for screens with a max-width of 400px */
 @media screen and (max-width: 400px)
 {
   .calendar_container
   {
-  margin: 0 5px;
-  font-size: 10px;
+  margin: 0 5px;      /* Add margin to the container for smaller screens */
+  font-size: 10px;    /* Decrease font size for smaller screens */
   }
 }
 

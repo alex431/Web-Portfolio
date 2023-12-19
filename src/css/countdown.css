@@ -1,29 +1,30 @@
-/* Styles for #countdown */
+/* Styles for the countdown container */
 #countdown 
 {
-  text-align: center; /* Center the text horizontally */
-  font-size: 24px; /* Set the font size to 24px */
-  margin: 0; /* Remove any default margin */
-  padding: 0 4px 1px; /* Set specific padding values (top, right, bottom, left) */
-  background-color: white; /* Set the background color to white */
+  text-align: center;               /* Center the text horizontally */
+  font-size: 24px;                  /* Set the font size to 24px */
+  margin: 0;                        /* Remove any default margin */
+  padding: 0 4px 1px;               /* Set specific padding values (top, right, bottom, left) */
+  background-color: white;        /* Set the background color to white */
 }
 
-/* Styles for #countdown-prompt */
-#countdown-prompt 
+/* Styles for the countdown prompt */
+#countdown_prompt 
 {
-  margin: 0; /* Remove any default margin */
+  margin: 0;        /* Remove any default margin */
 }
 
-/* Styles for #countdown_display */
+/* Styles for the countdown display */
 #countdown_display 
 {
-  margin: 0 0 5px; /* Set specific margin values (top, right, bottom, left) */
+  margin: 0 0 5px;        /* Set specific margin values (top, right, bottom, left) */
 }
 
+/* Media query for screens with a maximum width of 400px */
 @media screen and (max-width: 400px)
 {
   #countdown
   {
-    font-size: 16px;
+    font-size: 16px;         /* Decrease font size for smaller screens */
   }
 }

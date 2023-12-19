@@ -1,68 +1,54 @@
-.creds_row{
-    display: flex;
-    justify-content: center;
-    align-items: center; 
-    flex-wrap: wrap;
+/* Styles for the row containing credentials */
+.creds_row
+{
+    display: flex;                  /* Utilizes flexbox for layout */
+    justify-content: center;        /* Centers content horizontally */
+    align-items: center;            /* Centers content vertically */
+    flex-wrap: wrap;                /* Allows content to wrap to the next line if necessary */
 }
 
+/* Styles for individual columns within the credential row */
 .cred_column >.thumbnail
 {
-    width: 150px;
-    /* height: 100px; */
-    padding: 5px;
+    width: 150px;       /* Set a fixed width for the thumbnail column */
+    padding: 5px;       /* Add padding around the thumbnail */
 }
 
-.cred_column img:hover{
-    opacity: 0.8;
-    cursor: auto;
+/* Styles for hover effect on images within the .cred_column class */
+.cred_column img:hover
+{
+    opacity: 0.8;       /* Reduce opacity on hover for a visual effect */
+    cursor: auto;       /* Set the cursor to the default arrow */
 }
 
-.container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+/* Styles for the main container */
+.container 
+{
+    display: flex;                  /* Utilizes flexbox for layout */
+    justify-content: center;        /* Centers content horizontally */
+    align-items: center;            /* Centers content vertically */
 }
 
+/* Styles for the codelou class within .cred_column */
 .cred_column > .codelou 
 {
-    /* max-width: 100%; Ensure the image doesn't exceed its container's width */
     height: auto;    /* Allow the height to scale proportionally */
 }
 
+/* Styles for the uofl class within .cred_column */
 .cred_column > .uofl
 {
-    /* max-width: 80%; Ensure the image doesn't exceed its container's width */
     height: auto;    /* Allow the height to scale proportionally */
 }
 
+/* Styles for the expanded image */
 #expanded_img 
 {
-    max-width: 90%;
+    max-width: 90%;      /* Set a maximum width for the expanded image */
 }
 
 
-/* @media screen and (max-width: 1680px)
-{
-    .creds_row
-    {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        flex-direction: column; 
-        flex-wrap: wrap;
-    }
-}     */
 
-/* @media screen and (max-width: 820px)
-{
-    .creds_row
-    {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        flex-direction: column; 
-    }
-} */
 
 
 

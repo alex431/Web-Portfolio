@@ -1,62 +1,63 @@
 /* CSS for body and header */
 body
 {
-  margin: 0; /* Remove default margin */
-  padding: 0 ;
+  margin: 0;                                    /* Remove default margin */
+  padding: 0 ;                                  /* Remove default padding */
 
 } 
 
+/* Styles for the top header */
 #top-header
 {
-  overflow: hidden;
-  background: #ffd700;
-  /* background: #FF7518;  Set a background color for the header  */
+  overflow: hidden;                             /* Hide any content that overflows the header */
+  background: #ffd700;                        /* Set a background color for the header */
 }
 
-/* CSS for navigation links */
+/* Styles for navigation links */
 #top_nav > .nav_links 
 {
-  display: flex;
-  flex-direction: row;
-  list-style: none;
-  justify-content: space-between;
-  align-items: center; 
-  float: right;
-  padding: 0;
-  margin: 0;
+  display: flex;                                  /* Utilize flexbox for layout */
+  flex-direction: row;                            /* Arrange items in a row */
+  list-style: none;                               /* Remove default list styles */
+  justify-content: space-between;                 /* Spread items evenly along the main axis */
+  align-items: center;                            /* Center items vertically */
+  float: right;                                   /* Float the navigation to the right */
+  padding: 0;                                     /* Remove padding */
+  margin: 0;                                      /* Remove margin */
   
 }
 
 #top_nav > .nav_links > li
 {
-  padding: 7px 4px;
+  padding: 7px 4px;                             /* Add padding to list items */
 }
 
 #top_nav > .nav_links > li > a
 {
-  text-decoration: none;
-  font-size: 18px;
-  color: #000000;
+  text-decoration: none;                        /* Remove underline from links */
+  font-size: 18px;                              /* Set font size for links */
+  color: #000000;                             /* Set text color for links */
 
 }
 
 #top_nav > .nav_links li:hover
 {
-  background-color: #7DF9FF; /* Change background color on hover */
+  background-color: #7DF9FF;              /* Change background color on hover */
 }
 
+/* Styles for the footer */
 footer
 {
-  overflow: hidden;
-  background: #ffd700;
-  margin-top: auto; /* Push the footer to the bottom of the page */
+  overflow: hidden;                   /* Hide any content that overflows the footer */
+  background: #ffd700;              /* Set a background color for the footer */
+  margin-top: auto;                   /* Push the footer to the bottom of the page */
   
 }
 
 footer > p 
 {
-  padding-left: 5px;
-  color: #000000;
+  padding-left: 5px;                  /* Add padding to the paragraph in the footer */
+  color: #000000;                   /* Set text color for the paragraph in the footer */
 }
 
 /* Media Query for screens with width less than or equal to 768px */
@@ -65,61 +66,59 @@ footer > p
   /* Styles for the hamburger menu */ 
   .hamburger 
   {
-    display: flex;
-    flex-direction: column;
-    cursor: pointer;
-    padding: 5px 3px;
-    top: 3px;     
+    display: flex;                                              /* Utilize flexbox for layout */
+    flex-direction: column;                                     /* Arrange items in a column */
+    cursor: pointer;                                            /* Set cursor to pointer for interaction */
+    padding: 5px 3px;                                           /* Add padding to the hamburger menu */
+    top: 3px;                                                   /* Set top positioning for the hamburger menu */
   }
       
   .hamburger > span
   {
-    width: 25px;
-    height: 4px;
-    background-color: black;
-    margin: 1px 0;  
-    transition: background-color 0.3s ease-in-out; /* Smooth transition */
+    width: 25px;                                                /* Set width for hamburger menu bars */
+    height: 4px;                                                /* Set height for hamburger menu bars */
+    background-color: black;                                  /* Set background color for hamburger menu bars */
+    margin: 1px 0;                                              /* Add margin between hamburger menu bars */
+    transition: background-color 0.3s ease-in-out;              /* Smooth transition for background color */
   }
 
   #top_nav > .nav_links
   {
-    display: none; /* Hide the navigation links by default */
+    display: none;                    /* Hide the navigation links by default */
   }     
     
   /* Styles for the navigation when it's active (visible) */
   #top_nav.active 
   {
-    display: flex; 
-    flex-direction: column;
-    position: fixed;
-    width: 100%;
-    height: 100%;
-    background-color: #50C878;
-    /* #0BDA51,#98fb98  */
-    
-    top: 0;
-    left: 0;
-    z-index: 1;
+    display: flex;                              /* Utilize flexbox for layout */
+    flex-direction: column;                     /* Arrange items in a column */
+    position: fixed;                            /* Set the position to fixed */
+    width: 100%;                                /* Take up 100% of the width */
+    height: 100%;                               /* Take up 100% of the height */
+    background-color: #50C878;                /* Set background color for the active navigation */
+    top: 0;                                     /* Set top positioning for the active navigation */
+    left: 0;                                    /* Set left positioning for the active navigation */
+    z-index: 1;                                 /* Set z-index to ensure visibility above other elements */
   }
 
   #top_nav.active .hamburger > span
   {
-    background-color: transparent; /* Hide the hamburger menu bars */
-    transition: background-color 0.3s ease-in-out;
+    background-color: transparent;                                /* Hide the hamburger menu bars when active */
+    transition: background-color 0.3s ease-in-out;                /* Smooth transition for background color */
   }
     
   #top_nav.active > .nav_links 
   {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    height: 100%;
+    display: flex;                        /* Utilize flexbox for layout */
+    flex-direction: column;               /* Arrange items in a column */
+    justify-content: center;              /* Center items vertically */
+    align-items: center;                  /* Center items horizontally */
+    height: 100%;                         /* Take up 100% of the height */
       
   }
 
   #top_nav.active > .nav_links > li > a
   {
-    color: #000000; /* Change link color when active */
+    color: #000000;                       /* Change link color when active */
   }
 }

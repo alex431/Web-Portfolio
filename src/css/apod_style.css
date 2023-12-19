@@ -1,79 +1,54 @@
+/* Styles for the container holding the Astronomy Picture of the Day (APOD) */
 .apod_container 
 {
-    max-width: 400px;
-    margin: 0;
-    padding: 10px;
-    background-color: #fff;
-    box-shadow: 10px 10px 10px rgb(0 0 0 / 10%);
+    max-width: 400px;                                   /* Set maximum width for the container */
+    margin: 0;                                          /* Remove default margin */
+    padding: 10px;                                      /* Add padding to the container */
+    background-color: #fff;                           /* Set background color to white */
+    box-shadow: 10px 10px 10px rgb(0 0 0 / 10%);      /* Apply a subtle box shadow for depth */
 }
 
-/* Styling for a container that holds content, like an image and text.
-   - Sets a maximum width of 800px.
-   - Removes margin.
-   - Adds 10px of padding inside the container.
-   - Gives the container a white background.
-   - Applies a subtle box shadow for depth.
-*/
-
+/* Styles for centering the title within the container */
 .title_center 
 {
-    text-align: center;
-    margin-bottom: 5px;
-    margin-top: 0;
+    text-align: center;      /* Center-align text */
+    margin-bottom: 5px;      /* Add margin at the bottom */
+    margin-top: 0;           /* Remove default margin at the top */
 }
 
-/* Center-aligns text inside elements with the "centered" class.
-   - Used for text alignment.
-*/
-
+/* Styles for APOD image and video */
 #apod_image,
 #apod_video 
 {
-    max-width: 100%;
+    max-width: 100%;    /* Set maximum width for images and videos */
 }
 
-/* Styling for elements with the IDs "apod_image" and "apod_video".
-   - Sets the maximum width to 100% to make them responsive.
-   - Ensures images and videos resize to fit their containers.
-*/
-
+/* Styles for the content within the APOD container */
 .apod_content
 {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    display: flex;              /* Use flexbox for layout */
+    flex-direction: column;     /* Arrange content in a column */
+    justify-content: center;    /* Center content vertically */
+    align-items: center;        /* Center content horizontally */
 }
 
-/* Styles for an element with the class "content."
-   - Utilizes flexbox to center content both horizontally and vertically.
-*/
-
+/* Styles for the explanation text */
 #apod_explanation 
 {
-    margin: 0;
+    margin: 0;      /* Remove default margin for the explanation */
 }
 
-/* Styling for an element with the ID "apod_explanation."
-   - Removes margin to control spacing around the explanation text.
-*/
-
+/* Media query for screens with a maximum width of 1120px */
 @media screen and (max-width: 1120px) 
 {
     .apod_container 
     {
-        max-width: 100%; 
-        padding: 10px;
+        max-width: 100%;    /* Set maximum width to 100% for smaller screens */
+        padding: 10px;      /* Adjust padding for smaller screens */      
     }
 
     #apod_image, #apod_video 
     {
-        width: 100%; 
+        width: 100%;        /* Set width to 100% for images and videos on smaller screens */
     }
 }
-
-/* Media query for screens with a maximum width of 768px.
-   - Adjusts styles for responsive design.
-   - The "apod_container" expands to full width, and padding remains 10px.
-   - "apod_image" and "apod_video" elements have their width set to 100% to ensure full width.
-*/

@@ -1,79 +1,65 @@
+/* Styles for the credentials container */
 #about_creds_container
 {
-    /* display: flex;
-    flex: 1; */
-    min-height: 100vh;
-    background-color:#00CCCC ;
+    min-height: 100vh; /* Set minimum height to cover the full viewport height */
+    background-color:#00CCCC ; /* Set background color to a shade of cyan */
 }
 
-/* Styles for #about_container */
+/* Styles for the main about container */
 #about_container
 {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    padding: 0 5px;
+    display: flex;  /* Use flexbox for layout */
+    justify-content: center; /* Center content horizontally */
+    align-items: center; /* Center content vertically */
+    flex-direction: column; /* Arrange content in a column */
+    padding: 0 5px; /* Add padding to the container */
 }
 
-/* Container styling for the about section.
-   - Utilizes flexbox for a centered and vertically aligned layout.
-   - Displays content in a column direction.
-*/
-
+/* Styles for the about shot image */
 #about_shot
 {
-    width:100%;
-    max-width: 600px;
+    width:100%; /* Set image width to 100% of its container */
+    max-width: 600px;  /* Set maximum width for the image */
 }
 
-/* Styling for an element with the ID "about_shot."
-   - Sets the width to 100% for responsiveness.
-   - Limits the maximum width to 600px to control the size of the element.
-*/
-
+/* Styles for the about text */
 .about_text
 {
-    /* text-align: center; */
-    max-width: 700px;
+    max-width: 700px; /* Set maximum width for the text container */
 }
 
-/* Styling for elements with the class "about_text."
-   - Centers the text horizontally.
-   - Limits the maximum width to 700px to control the size of the text container.
-*/
-
+/* Styles for the skills container */
 .skills_container
 {
-    text-align: center;
+    text-align: center; /* Center-align text within the skills container */
 }
 
+/* Styles for the skills list */
 .skills
 {
-    column-count: 3;
-    /* column-gap: 20px; */
-    /* text-align: center; */
-    list-style-type: none;
-    padding: 0;
+    column-count: 3;        /* Arrange skills in three columns */
+    list-style-type: none;  /* Remove default list styling */
+    padding: 0;             /* Remove padding from the skills list */
 }
 
+/* Styles for individual skill items */
 .skills li 
 {
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
+    display: flex;                  /* Use flexbox for layout within each skill item */
+    justify-content: space-evenly;  /* Distribute space evenly between items */
+    align-items: center;            /* Center-align items vertically */
 }
 
+/* Media query for screens with a maximum width of 400px */
 @media screen and (max-width: 400px) 
 {
   .about_text p
   {
-    font-size: 12px;
+    font-size: 12px;  /* Decrease font size for paragraphs in about text */
   }
 
   .skills_container
   {
-    font-size: 12px;
+    font-size: 12px; /* Decrease font size for text within skills container */
   }
-
 }

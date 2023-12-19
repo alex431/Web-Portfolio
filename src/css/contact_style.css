@@ -1,120 +1,113 @@
-
+/* Styles for the contact container */
 #contact_container
 {
-    display: flex;
-    flex: 1;
-    justify-content: space-between;
-    align-items: center;
-    min-height: 100vh;
+    display: flex;                                       /* Utilize flexbox for layout */
+    flex: 1;                                             /* Allow the container to grow and shrink as needed */
+    justify-content: space-between;                      /* Distribute space evenly between child elements */
+    align-items: center;                                 /* Center child elements vertically */
+    min-height: 100vh;                                   /* Set a minimum height to cover the full viewport height */
     background: url('../img/nastya-dulhiier-OKOOGO578eo-unsplash.webp') center center no-repeat,
         url('../img/nastya-dulhiier-OKOOGO578eo-unsplash.jpg') center center no-repeat ; 
-    background-size: cover;
-
-    /* background-size: 100% 100%; */
-    /* margin: 0;
-    padding: 0; */
-    
-    /* Set up a flex container with space between items and centering */
+    background-size: cover;                              /* Ensure the background images cover the container */
 }
 
+/* Styles for the Google Form section */
 #g_form
 {
-    background-color:	#40e0d0 ;
+    background-color:	#40e0d0 ;                      /* Set the background color for the Google Form */
 }
 
-
+/* Styles for the social media container */
 #social_media
 {
-    text-align: center;
-    background-color: white;
-    padding: 5px;
-    
-    /* Center the text within the social media container */
-
+    text-align: center;                     /* Center-align text within the social media container */
+    background-color: white;              /* Set a white background color */
+    padding: 5px;                           /* Add padding to the social media container */
 }
 
+/* Styles for the social media greeting */
 #social_greeting
 {
-    text-transform: uppercase;
-    margin: 0 0 10px;
-
-    /* Convert text to uppercase for the social greeting */
+    text-transform: uppercase;          /* Convert text to uppercase for the social greeting */
+    margin: 0 0 10px;                   /* Set margin for the social greeting */
 }
 
+/* Styles for the social media logo container */
 .social_logo
 {
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-
-    /* Set up a flex container with space-evenly and centering */
+    display: flex;                          /* Utilize flexbox for layout */
+    justify-content: space-evenly;          /* Distribute space evenly between child elements */
+    align-items: center;                    /* Center child elements vertically */
 }
 
+/* Styles for social media logo images */
 .social_logo img 
 {
-    width: auto;
-    height: 100px;
+    width: auto;                /* Allow the width to adjust based on the content */
+    height: 100px;              /* Set a fixed height for the social media logo images */
 }
 
+/* Styles for the GitHub logo */
 #github_logo
 {
-    background-color: black;
-
-    /* Set the background color of the GitHub logo to black */
+    background-color: black;        /* Set the background color of the GitHub logo to black */
 }
 
+/* Styles for the contact section */
 #contact_section
 {
-    background: #ffffff;
-    text-align: center;
-    display: flex;
-    flex-direction: column;
+    background: #ffffff;            /* Set a white background color for the contact section */
+    text-align: center;               /* Center-align text within the contact section */
+    display: flex;                    /* Utilize flexbox for layout */
+    flex-direction: column;           /* Arrange content in a column */
 }
 
+/* Styles for the contact heading */
 #contact_heading  
 {
-    margin: 10px 0;
+    margin: 10px 0;         /* Arrange content in a column */
 }
 
+/* Styles for the phone information */
 #contact_phone
 {
-    margin: 0;
+    margin: 0;               /* Remove any default margin for the phone */
 }
 
+/* Styles for the email information */
 #contact_email
 {
-    margin-top: 0;
-    margin-bottom: 8px;
+    margin-top: 0;              /* Remove top margin for the email */
+    margin-bottom: 8px;         /* Set bottom margin for the contact email */
 }
 
+/* Media query for screens with a maximum width of 1120px */
 @media (max-width: 1120px) 
 {
     #contact_container
     {
-      flex-direction: column;
-      align-items: center;  
+      flex-direction: column;           /* Arrange content in a column for smaller screens */
+      align-items: center;              /* Center content vertically for smaller screens */
     }
 
     #g_form
     {
-      margin: 0 5px;
-      /* max-width: 437px; */
+      margin: 0 5px;                    /* Add margin to the Google Form for spacing */
     }
 
     #g_form iframe
     {
-        max-width: 100%;
+        max-width: 100%;                /* Set maximum width for the Google Form iframe */
     }
 
     #social_media
     {
-        margin: 10px auto;
+        margin: 10px auto;              /* Center the social media container horizontally */
         
     }
 
-    #contact_section iframe
+    #contact_section iframe         
     {
-        max-width: 100%;
+        max-width: 100%;                /* Set maximum width for iframes in the contact section */
     }
-
 }
