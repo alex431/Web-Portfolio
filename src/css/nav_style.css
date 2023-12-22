@@ -7,7 +7,7 @@ body
 } 
 
 /* Styles for the top header */
-#top-header
+#top_header
 {
   overflow: hidden;                             /* Hide any content that overflows the header */
   background: #ffd700;                        /* Set a background color for the header */
